@@ -4,7 +4,6 @@ import { Link, useHistory } from 'react-router-dom'
 const apiKey = 'AIzaSyBFr1QW_fF9sluMRPfYk6UzMgoOAxlFC0I'
 const url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apiKey}`
 
-
 const Register = () => {
 
     const [user, getUser] = useState({
@@ -37,7 +36,6 @@ const Register = () => {
                 console.log(e);
             })
     }
-
     return (
         <div className={ styles.container }>
             <h1 className={ styles.name }>Register</h1>

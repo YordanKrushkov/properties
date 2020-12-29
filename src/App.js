@@ -10,6 +10,7 @@ import Rent from './components/Rent'
 import Sell from './components/Sell';
 import {useContext } from 'react';
 import UserContext from './Context';
+import SingleCard from './components/singleCard'
 
 const App=(props)=>{
   const context=useContext(UserContext);
@@ -34,6 +35,7 @@ const App=(props)=>{
           <Route path='/register' component={Register}/>
           <Route path='/rent' component={Rent}/>
           <Route path='/sell' component={Sell}/>
+          <Route path='/propertie/:id' component={SingleCard}/>
           </Switch>
   
   

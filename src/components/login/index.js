@@ -13,7 +13,7 @@ const Login = () => {
     const context = useContext(UserContext);
     const history = useHistory();
     const chnageHendler = (e) => {
-        this.setState({
+        getUser({
             [e.target.id]: e.target.value
         })
     }
@@ -57,6 +57,4 @@ const Login = () => {
         </div>
     )
 }
-
-
 export default Login

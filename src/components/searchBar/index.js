@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
 import styles from './index.module.css'
 
 
-class Search extends Component {
-    render() {
+const Search =() => {
+    
         return(
             <div className={styles.card}>
             <header>  
@@ -47,7 +46,6 @@ class Search extends Component {
                <button>SEARCH</button>
             </div>
         )
-    }
 
 }
 export default Search;

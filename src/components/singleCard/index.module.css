@@ -1,0 +1,104 @@
+.conteiner {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    margin:40px auto;
+}
+
+.images{
+    width: 50vw;
+
+}
+.header{
+    display: flex;
+    justify-content: flex-start;
+   max-width: 71.5vw;
+}
+.ul{
+    width: 70%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    background-color: lightblue;
+    margin: 0px;
+}
+.li{
+    font-size:20px;
+    height: 100%;
+    width: 100%;
+    
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.li:hover{
+    background-color: lightgrey;
+    cursor: pointer;
+}
+.link{
+    justify-self: center;
+    text-align: center;
+    color: black;
+}
+.infoContainers{
+    margin:0px;
+    background-color: white;
+    width: 63.5%;
+    height: 600px;
+}
+
+.details{
+    font-size: 24px;
+}
+
+.floorplan{
+    font-size: 24px;
+    display: none;
+}
+
+.map{
+    display: none;
+}
+.moreInfo{
+    display: none;
+}
+.iconsParents{
+    padding: 40px;
+    margin:0 auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+}
+.icons{
+    display: flex;
+    align-items:center;
+    margin-right: 20px;
+}
+
+.iconsPic{
+    width: 32px;
+    margin-right: 10px;
+}
+
+.detailsList{
+    width: 850px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* margin-left: 40px; */
+    margin:0 auto;
+}
+
+.h2{
+    text-align: center;
+}
+.descriptionBody{
+    text-align:center;
+    
+}

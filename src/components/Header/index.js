@@ -5,9 +5,7 @@ import UserContext from '../../Context';
 
 const Header = () => {
     const context = useContext(UserContext)
-    const onLogout = () => {
-        context.logOut();
-    }
+    const onLogout = () => {context.logOut();}
 
     let nav;
     const { loggedIn } = context
@@ -33,8 +31,6 @@ const Header = () => {
             {nav }
         </div>
     )
-
-
 }
 
 export default Header
