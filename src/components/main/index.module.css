@@ -1,0 +1,34 @@
+.container{
+    width: 100vw;
+    height: 80vh;
+}
+
+.container img {
+    width:100%;
+    height: 110%;
+    display: block;
+    margin:-1px 0;
+}
+
+.title{
+    position: absolute;
+    top:500px;
+    left: 50px;
+}
+
+.title h1 {
+    font-size: 72px;
+    font-weight: bold;
+    color: rgba(47, 191, 236, 0.59);
+    -webkit-text-stroke: 2px white;
+    margin:0 0 0 0;
+}
+
+.title h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: rgba(47, 191, 236, 0.59);
+    -webkit-text-stroke: 2px white;
+    margin:0 0 0 300px;
+
+}

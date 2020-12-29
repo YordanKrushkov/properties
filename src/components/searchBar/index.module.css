@@ -1,0 +1,72 @@
+.card{
+    position: absolute;
+    display: grid;
+    grid-row: auto;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    top: 150px;
+    right: 200px;
+    border-radius: 10px;
+ border-color: rgba(122, 206, 233, 1);
+
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h4{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top:20px;
+}
+
+.imputs{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.type{
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+ border-color: rgba(122, 206, 233, 1);
+
+}
+
+
+.radio{
+    display: flex;
+    justify-content: space-evenly;
+    margin:20px auto;
+    font-size: 24px;
+    
+}
+.location{
+ height: 50px;
+ width: 100px;
+ border-color: rgba(122, 206, 233, 1);
+
+}
+
+.typeflat{
+    height: 50px;
+    width: 200px;
+    border-color: rgba(122, 206, 233, 1);
+}
+
+.card button{
+    justify-self: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(122, 206, 233, 1);
+    border-radius: 50px;
+    width: 200px;
+    border:none;
+    margin-bottom:40px;
+}

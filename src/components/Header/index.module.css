@@ -1,0 +1,43 @@
+.container{
+    margin:0;
+    height: 50px;
+    background-color: rgba(47, 191, 236, 0.59);
+    opacity: 59%;
+    display: flex;
+    justify-content: space-between;
+}
+.container ul{
+    display: flex;
+    align-items: center;
+    margin-right: 28px;
+}
+.container ul li {
+    display: inline;
+    margin-right: 28px;
+}
+.container ul li:hover{
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size:20px;
+}
+
+.login{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h1{ 
+    font-weight: bold;
+    color: white;
+    margin: 0 0 0 28px;
+}
+
+.loginField{
+    display: none;
+}
