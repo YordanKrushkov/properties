@@ -5,182 +5,182 @@ const AllCities=(classNeme)=>{
 
     return(
         <select name="town" id='town' className={classNeme}>
-<option value="0" selected>Всички</option>
-<option>София</option>
-<option>Пловдив</option>
-<option>Варна</option>
-<option>Бургас</option>
-<option>Стара Загора</option>
-<option>Русе</option>
-<option>Плевен</option>
-<option>Айтос</option>
-<option>Аксаково</option>
-<option>Антоново</option>
-<option>Априлци</option>
-<option>Асеновград</option>
-<option>Ахтопол</option>
-<option>Балчик</option>
-<option>Банкя</option>
-<option>Банско</option>
-<option>Баня</option>
-<option>Батак</option>
-<option>Белене</option>
-<option>Белово</option>
-<option>Белоградчик</option>
-<option>Белослав</option>
-<option>Берковица</option>
-<option>Благоевград</option>
-<option>Бобов Дол</option>
-<option>Боровец</option>
-<option>Ботевград</option>
-<option>Брезник</option>
-<option>Бургас</option>
-<option>Бяла</option>
-<option>Бяла Слатина</option>
-<option>Варна</option>
-<option>Васил Левски</option> 
-<option>Велико Търново</option>
-<option>Велинград</option>
-<option>Видин</option>
-<option>Враца</option>
-<option>Вълчедръм</option>
-<option>Вършец</option>
-<option>Габрово</option>
-<option>Генерал Тошево</option>
-<option>Горна Оряховица</option>
-<option>Гоце Делчев</option>
-<option>Гълъбово</option>
-<option>Две Могили</option>
-<option>Девин</option>
-<option>Девня</option>
-<option>Джебел</option>
-<option>Димитровград</option>
-<option>Добрич</option>
-<option>Долни Дъбник</option>
-<option>Дряново</option>
-<option>Дулово</option>
-<option>Дупница</option>
-<option>Елена</option>
-<option>Елин Пелин</option>
-<option>Елхово</option>
-<option>Етрополе</option>
-<option>Златоград</option>
-<option>Исперих</option>
-<option>Ихтиман</option>
-<option>Каварна</option>
-<option>Казанлък</option>
-<option>Калофер</option> 
-<option>Карлово</option>
-<option>Карнобат</option>
-<option>Климен</option> 
-<option>Клисура</option> 
-<option>Кнежа</option>
-<option>Козлодуй</option>
-<option>Копривщица</option> 
-<option>Костандово</option>
-<option>Костенец</option>
-<option>Костинброд</option>
-<option>Котел</option>
-<option>Кресна</option>
-<option>Крумовград</option>
-<option>Кубрат</option>
-<option>Кула</option>
-<option>Кърджали</option>
-<option>Кюстендил</option>
-<option>Левски</option>
-<option>Ловеч</option>
-<option>Лозница</option>
-<option>Лом</option>
-<option>Луковит</option>
-<option>Любимец</option>
-<option>Лясковец</option>
-<option>Мадан</option>
-<option>Мало Конаре</option>
-<option>Мездра</option>
-<option>Момчилград</option>
-<option>Монтана</option>
-<option>Несебър</option>
-<option>Никопол</option>
-<option>Нова Загора</option>
-<option>Нови Пазар</option>
-<option>Оборочище</option>
-<option>Омуртаг</option>
-<option>Оряхово</option>
-<option>Павликени</option>
-<option>Пазарджик</option>
-<option>Пампорово</option>
-<option>Панагюрище</option>
-<option>Панчарево</option>
-<option>Перник</option>
-<option>Петрич</option>
-<option>Пещера</option>
-<option>Плевен</option>
-<option>Пловдив</option>
-<option>Полски Тръмбеш</option>
-<option>Поморие</option>
-<option>Попово</option>
-<option>Правец</option>
-<option>Преслав</option>
-<option>Приморско</option>
-<option>Провадия</option>
-<option>Първомай</option>
-<option>Раднево</option>
-<option>Радомир</option>
-<option>Разград</option>
-<option>Разлог</option>
-<option>Ракитово</option>
-<option>Раковски</option>
-<option>Розино</option>
-<option>Рудозем</option>
-<option>Русе</option>
-<option>Самоков</option>
-<option>Самуил</option>
-<option>Сандански</option>
-<option>Свиленград</option>
-<option>Свищов</option>
-<option>Своге</option>
-<option>Севлиево</option>
-<option>Септември</option>
-<option>Силистра</option>
-<option>Симеоновград</option>
-<option>Симитли</option>
-<option>Сливен</option>
-<option>Сливница</option>
-<option>Слънчев Бряг</option>
-<option>Смолян</option>
-<option>Созопол</option>
-<option>Сопот</option>
-<option>София</option>
-<option>Средец</option>
-<option>Средногорие</option>
-<option>Стамболийски</option>
-<option>Стара Загора</option>
-<option>Стражица</option>
-<option>Стралджа</option>
-<option>Сунгурларе</option>
-<option>Съединение</option>
-<option>Твърдица</option>
-<option>Тервел</option>
-<option>Тетевен</option>
-<option>Тополовград</option>
-<option>Троян</option>
-<option>Трявна</option>
-<option>Тутракан</option>
-<option>Търговище</option>
-<option>Харманли</option>
-<option>Хасково</option>
-<option>Хисаря</option>
-<option>Царево</option>
-<option>Цар Калоян</option>
-<option>Чепеларе</option>
-<option>Червен Бряг</option>
-<option>Черноочене</option>
-<option>Чирпан</option>
-<option>Шабла</option>
-<option>Шумен</option>
-<option>Якоруда</option>
-<option>Ямбол</option>
-<option>Завет</option>
+<option value="0" selected>Show All</option>
+<option value='city'>София</option>
+<option value='city'>Пловдив</option>
+<option value='city'>Варна</option>
+<option value='city'>Бургас</option>
+<option value='city'>Стара Загора</option>
+<option value='city'>Русе</option>
+<option value='city'>Плевен</option>
+<option value='city'>Айтос</option>
+<option value='city'>Аксаково</option>
+<option value='city'>Антоново</option>
+<option value='city'>Априлци</option>
+<option value='city'>Асеновград</option>
+<option value='city'>Ахтопол</option>
+<option value='city'>Балчик</option>
+<option value='city'>Банкя</option>
+<option value='city'>Банско</option>
+<option value='city'>Баня</option>
+<option value='city'>Батак</option>
+<option value='city'>Белене</option>
+<option value='city'>Белово</option>
+<option value='city'>Белоградчик</option>
+<option value='city'>Белослав</option>
+<option value='city'>Берковица</option>
+<option value='city'>Благоевград</option>
+<option value='city'>Бобов Дол</option>
+<option value='city'>Боровец</option>
+<option value='city'>Ботевград</option>
+<option value='city'>Брезник</option>
+<option value='city'>Бургас</option>
+<option value='city'>Бяла</option>
+<option value='city'>Бяла Слатина</option>
+<option value='city'>Варна</option>
+<option value='city'>Васил Левски</option> 
+<option value='city'>Велико Търново</option>
+<option value='city'>Велинград</option>
+<option value='city'>Видин</option>
+<option value='city'>Враца</option>
+<option value='city'>Вълчедръм</option>
+<option value='city'>Вършец</option>
+<option value='city'>Габрово</option>
+<option value='city'>Генерал Тошево</option>
+<option value='city'>Горна Оряховица</option>
+<option value='city'>Гоце Делчев</option>
+<option value='city'>Гълъбово</option>
+<option value='city'>Две Могили</option>
+<option value='city'>Девин</option>
+<option value='city'>Девня</option>
+<option value='city'>Джебел</option>
+<option value='city'>Димитровград</option>
+<option value='city'>Добрич</option>
+<option value='city'>Долни Дъбник</option>
+<option value='city'>Дряново</option>
+<option value='city'>Дулово</option>
+<option value='city'>Дупница</option>
+<option value='city'>Елена</option>
+<option value='city'>Елин Пелин</option>
+<option value='city'>Елхово</option>
+<option value='city'>Етрополе</option>
+<option value='city'>Златоград</option>
+<option value='city'>Исперих</option>
+<option value='city'>Ихтиман</option>
+<option value='city'>Каварна</option>
+<option value='city'>Казанлък</option>
+<option value='city'>Калофер</option> 
+<option value='city'>Карлово</option>
+<option value='city'>Карнобат</option>
+<option value='city'>Климен</option> 
+<option value='city'>Клисура</option> 
+<option value='city'>Кнежа</option>
+<option value='city'>Козлодуй</option>
+<option value='city'>Копривщица</option> 
+<option value='city'>Костандово</option>
+<option value='city'>Костенец</option>
+<option value='city'>Костинброд</option>
+<option value='city'>Котел</option>
+<option value='city'>Кресна</option>
+<option value='city'>Крумовград</option>
+<option value='city'>Кубрат</option>
+<option value='city'>Кула</option>
+<option value='city'>Кърджали</option>
+<option value='city'>Кюстендил</option>
+<option value='city'>Левски</option>
+<option value='city'>Ловеч</option>
+<option value='city'>Лозница</option>
+<option value='city'>Лом</option>
+<option value='city'>Луковит</option>
+<option value='city'>Любимец</option>
+<option value='city'>Лясковец</option>
+<option value='city'>Мадан</option>
+<option value='city'>Мало Конаре</option>
+<option value='city'>Мездра</option>
+<option value='city'>Момчилград</option>
+<option value='city'>Монтана</option>
+<option value='city'>Несебър</option>
+<option value='city'>Никопол</option>
+<option value='city'>Нова Загора</option>
+<option value='city'>Нови Пазар</option>
+<option value='city'>Оборочище</option>
+<option value='city'>Омуртаг</option>
+<option value='city'>Оряхово</option>
+<option value='city'>Павликени</option>
+<option value='city'>Пазарджик</option>
+<option value='city'>Пампорово</option>
+<option value='city'>Панагюрище</option>
+<option value='city'>Панчарево</option>
+<option value='city'>Перник</option>
+<option value='city'>Петрич</option>
+<option value='city'>Пещера</option>
+<option value='city'>Плевен</option>
+<option value='city'>Пловдив</option>
+<option value='city'>Полски Тръмбеш</option>
+<option value='city'>Поморие</option>
+<option value='city'>Попово</option>
+<option value='city'>Правец</option>
+<option value='city'>Преслав</option>
+<option value='city'>Приморско</option>
+<option value='city'>Провадия</option>
+<option value='city'>Първомай</option>
+<option value='city'>Раднево</option>
+<option value='city'>Радомир</option>
+<option value='city'>Разград</option>
+<option value='city'>Разлог</option>
+<option value='city'>Ракитово</option>
+<option value='city'>Раковски</option>
+<option value='city'>Розино</option>
+<option value='city'>Рудозем</option>
+<option value='city'>Русе</option>
+<option value='city'>Самоков</option>
+<option value='city'>Самуил</option>
+<option value='city'>Сандански</option>
+<option value='city'>Свиленград</option>
+<option value='city'>Свищов</option>
+<option value='city'>Своге</option>
+<option value='city'>Севлиево</option>
+<option value='city'>Септември</option>
+<option value='city'>Силистра</option>
+<option value='city'>Симеоновград</option>
+<option value='city'>Симитли</option>
+<option value='city'>Сливен</option>
+<option value='city'>Сливница</option>
+<option value='city'>Слънчев Бряг</option>
+<option value='city'>Смолян</option>
+<option value='city'>Созопол</option>
+<option value='city'>Сопот</option>
+<option value='city'>София</option>
+<option value='city'>Средец</option>
+<option value='city'>Средногорие</option>
+<option value='city'>Стамболийски</option>
+<option value='city'>Стара Загора</option>
+<option value='city'>Стражица</option>
+<option value='city'>Стралджа</option>
+<option value='city'>Сунгурларе</option>
+<option value='city'>Съединение</option>
+<option value='city'>Твърдица</option>
+<option value='city'>Тервел</option>
+<option value='city'>Тетевен</option>
+<option value='city'>Тополовград</option>
+<option value='city'>Троян</option>
+<option value='city'>Трявна</option>
+<option value='city'>Тутракан</option>
+<option value='city'>Търговище</option>
+<option value='city'>Харманли</option>
+<option value='city'>Хасково</option>
+<option value='city'>Хисаря</option>
+<option value='city'>Царево</option>
+<option value='city'>Цар Калоян</option>
+<option value='city'>Чепеларе</option>
+<option value='city'>Червен Бряг</option>
+<option value='city'>Черноочене</option>
+<option value='city'>Чирпан</option>
+<option value='city'>Шабла</option>
+<option value='city'>Шумен</option>
+<option value='city'>Якоруда</option>
+<option value='city'>Ямбол</option>
+<option value='city'>Завет</option>
 </select>
     )
 }
