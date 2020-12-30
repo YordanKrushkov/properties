@@ -49,17 +49,6 @@ const Search = () => {
 
                 <div className={ styles.typeContainer }>
                     <div className={ styles.type }>
-                        <label htmlFor="type">Bedroom</label>
-                        <select name="type" id="type" className={ styles.typeflat }>
-                        { SearchOpions('bedrooms', '0', 'Show All') }
-                            { SearchOpions('bedrooms', 'studio', 'Studio') }
-                            { SearchOpions('bedrooms', 'one', '1 bed') }
-                            { SearchOpions('bedrooms', 'two', '2 bed') }
-                            { SearchOpions('bedrooms', 'three', '3 bed') }
-                            { SearchOpions('bedrooms', 'four', '4 bed+') }
-                        </select>
-                    </div>
-                    <div className={ styles.type }>
                         <label htmlFor="type">Property Type</label>
                         <select name="type" id="type" className={ styles.typeflat }>
                             { SearchOpions('type', '0', 'Show All') }
@@ -67,6 +56,18 @@ const Search = () => {
                             { SearchOpions('type', 'house', 'Houses') }
                             { SearchOpions('type', 'cottage', 'Cottage') }
                             { SearchOpions('type', 'land', 'Land') }
+                        </select>
+                    </div>
+
+                    <div className={ styles.type }>
+                        <label htmlFor="type">Bedroom</label>
+                        <select name="type" id="type" className={ styles.typeflat }>
+                        { SearchOpions('type', '0', 'Show All') }
+                            { SearchOpions('bedrooms', 'studio', 'Studio') }
+                            { SearchOpions('bedrooms', 'one', '1 bed') }
+                            { SearchOpions('bedrooms', 'two', '2 bed') }
+                            { SearchOpions('bedrooms', 'three', '3 bed') }
+                            { SearchOpions('bedrooms', 'four', '4 bed+') }
                         </select>
                     </div>
                 </div>
