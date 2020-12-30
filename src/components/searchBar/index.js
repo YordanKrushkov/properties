@@ -1,51 +1,53 @@
 import styles from './index.module.css'
+import SearchOpions from '../searchInputs'
+import AllCities from '../searchInputs/cities'
+import Price from '../searchInputs/price'
+const Search = () => {
 
-
-const Search =() => {
-    
-        return(
-            <div className={styles.card}>
-            <header>  
-            <h4> Search for Property </h4>
+    return (
+        <div className={ styles.card }>
+            <header>
+                <h4 className={styles.searchCardTitle}> Search for Property </h4>
             </header>
-            <main>
-              <div className={styles.imputs} >
-                    <select name="country" id="country" className={styles.location}>
-                        <option value="country" >Country</option>
-                        <option value="England" >England</option>
-                        <option value="Bulgaria" >Bulgaria</option>
-                        <option value="Germany" >Germany</option>
+            <main className={styles.main}>
+                <div className={ styles.imputs } >
+                    <label htmlFor="town">Town</label>
+                    { AllCities(styles.options) }
+                </div>
+                <div className={ styles.imputs } >
+                    <label htmlFor="price">Min.Price</label>
+                    { Price("minPrice", styles.options) }
+                </div>
+                <div className={ styles.imputs } >
+                    <label htmlFor="price">Max.Price</label>
+                    { Price("maxPrice", styles.options) }
+                </div>
+                <div className={styles.typeContainer}>
+                <div className={ styles.type }>
+                    <label htmlFor="type">Bedroom</label>
+                    <select name="type" id="type" className={ styles.typeflat }>
+                        { SearchOpions('bedrooms', 'studio', 'Studio') }
+                        { SearchOpions('bedrooms', 'one', '1 bed') }
+                        { SearchOpions('bedrooms', 'two', '2 bed') }
+                        { SearchOpions('bedrooms', 'three', '3 bed') }
+                        { SearchOpions('bedrooms', 'four', '4 bed+') }
                     </select>
-                    <select name="town" id="town" className={styles.location}>
-                        <option value="tondon" >Town</option>
-                        <option value="London" >London</option>
-                        <option value="Sofia" >Sofia</option>
-                        <option value="Berlin" >Berlin</option>
+                </div>
+                <div className={ styles.type }>
+                    <label htmlFor="type">Property Type</label>
+                    <select name="type" id="type" className={ styles.typeflat }>
+                        { SearchOpions('type', 'flat', 'Flat') }
+                        { SearchOpions('type', 'house', 'Hause') }
+                        { SearchOpions('type', 'cottage', 'Cottage') }
+                        { SearchOpions('type', 'land', 'Land') }
                     </select>
                 </div>
-                <div className={styles.type}>
-                <select name="type" id="type" className={styles.typeflat}>
-                    <option value="typeofproperty">Type of property</option>
-                    <option value="onebedroom">One bedroom flat</option>
-                    <option value="twobedroom">Two bedroom flat</option>
-                    <option value="house">House</option>
-                </select>
                 </div>
-                <div className={styles.radio}>
-                <div>
-                <label htmlFor="rent">Rent</label>
-                    <input type="radio" id="sell"/>
-                </div>
-                  <div>
-                  <label htmlFor="sell">Sell</label>
-                    <input type="radio" id="sell"/>
-                  </div>
-                    
-              </div>
+                
             </main>
-               <button>SEARCH</button>
-            </div>
-        )
+            <button>SEARCH</button>
+        </div>
+    )
 
 }
 export default Search;

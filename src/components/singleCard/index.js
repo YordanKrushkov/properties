@@ -14,10 +14,10 @@ const SingleCard = () => {
                 <div className={ styles.info }>
                     <header className={ styles.header }>
                         <ul className={ styles.ul }>
-                            <li className={ styles.li }><a className={ styles.link }>Property Details</a></li>
-                            <li className={ styles.li }><a className={ styles.link }>Floorplan</a></li>
-                            <li className={ styles.li }><a className={ styles.link }>Map</a></li>
-                            <li className={ styles.li }><a className={ styles.link }>More info</a></li>
+                            <li className={ styles.li }><a href="/details" className={ styles.link }>Property Details</a></li>
+                            <li className={ styles.li }><a href="/floorplan" className={ styles.link }>Floorplan</a></li>
+                            <li className={ styles.li }><a href="/map" className={ styles.link }>Map</a></li>
+                            <li className={ styles.li }><a href="/moreinfo" className={ styles.link }>More info</a></li>
                         </ul>
                     </header>
                     <div className={ styles.infoContainers }>
@@ -36,18 +36,18 @@ const SingleCard = () => {
                                 <h2 className={styles.h2}>Details</h2>
 
                                 <ul className={styles.detailsList}>
-                                    <li>Lorem ipsum dolor sit amet.</li>
-                                    <li>Lorem ipsum dolor sit amet.</li>
-                                    <li>Lorem ipsum dolor sit amet.</li>
-                                    <li>Lorem ipsum dolor sit amet.</li>
-                                    <li>Lorem ipsum dolor sit amet.</li>
-                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li className={styles.detLi}>Lorem ipsum dolor sit amet.</li>
+                                    <li className={styles.detLi}>Lorem ipsum dolor sit amet.</li>
+                                    <li className={styles.detLi}>Lorem ipsum dolor sit amet.</li>
+                                    <li className={styles.detLi}>Lorem ipsum dolor sit amet.</li>
+                                    <li className={styles.detLi}>Lorem ipsum dolor sit amet.</li>
+                                    <li className={styles.detLi}>Lorem ipsum dolor sit amet.</li>
                                 </ul>
                             </div>
                             <div className={styles.description}>
                                 <h2 className={styles.h2}>Description</h2>
                                 <div className={styles.descriptionBody}>
-                                <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil illum magni similique, est repellat in iure fugiat dignissimos accusamus possimus.</p>
+                                <p className={styles.p}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, commodi! Eius quis inventore dolor, assumenda quod atque, minus suscipit obcaecati, consequuntur repellendus dicta rem distinctio quam? Minus nulla fugiat nobis. Mollitia beatae ducimus deleniti nisi suscipit dolores officiis inventore velit?</p>
                                 </div>
                                 
                             </div>
@@ -63,8 +63,13 @@ const SingleCard = () => {
             </div>
             <aside className={ styles.lender }>
                 <header className={ styles.asideHeader }>
-                    <h1>Property</h1>
+                <h2>1 bedroom flat</h2>
+                <h5>40A Reporton Road SW6 7JR</h5>
+                <h2> $ 1650 p.m</h2>
                 </header>
+                <div className={styles.propertieCardInfo}>
+                    <button className={styles.button}>Contact</button>
+                </div>  
             </aside>
         </div>
     )

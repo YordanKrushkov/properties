@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react'
 import CardElement from "../components/cards/card-elemtent";
 
 export default {
@@ -10,6 +9,10 @@ export default {
     renderProperties (properties,filter){
         return Object.keys(properties).map((propertie) => {
             if (properties[propertie].hasOwnProperty(filter)) {
+                let item = properties[propertie]
+                let key = propertie;
+                return CardElement(item, key)
+            }else{
                 let item = properties[propertie]
                 let key = propertie;
                 return CardElement(item, key)

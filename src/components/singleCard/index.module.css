@@ -4,18 +4,21 @@
     justify-content: space-between;
     margin:40px auto;
 }
-
+.propertieInfo{
+    width: 95%;
+}
 .images{
-    width: 50vw;
+    width: 93%;
 
 }
 .header{
     display: flex;
     justify-content: flex-start;
-   max-width: 71.5vw;
+    max-width: 93%;
+    width: 100%;
 }
 .ul{
-    width: 70%;
+    width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -48,8 +51,9 @@
 .infoContainers{
     margin:0px;
     background-color: white;
-    width: 63.5%;
-    height: 600px;
+    width: 100%;
+    max-width: 93%;
+    height: 100%;
 }
 
 .details{
@@ -87,12 +91,15 @@
 }
 
 .detailsList{
-    width: 850px;
+    width: 90%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     /* margin-left: 40px; */
     margin:0 auto;
+}
+.detLi{
+    margin: 10px 40px;
 }
 
 .h2{
@@ -100,5 +107,41 @@
 }
 .descriptionBody{
     text-align:center;
+}
+
+.p{
+    text-align: center;
+    padding: 10px 30px 40px 30px;
+}
+
+.lender{
+    background-color: white;
+    max-width: 30%;
+    width: 100%;
+    height: 100%;
+    max-height: 50%;
+   display: flex;
+   flex-direction: column;
+}
+
+.asideHeader{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
+}
+.propertieCardInfo{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.button{
+    width: 350px;
+    height: 50px;
+    margin: 20px auto;
+    border-radius: 20px;
+    border:none;
+    color:white;
+    background-color:lightblue;
 }

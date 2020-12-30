@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 import styles from './index.module.css';
 import getProperties from '../../services/getData'
 
