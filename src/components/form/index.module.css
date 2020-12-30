@@ -1,58 +1,172 @@
 .formContainer{
     display:flex;
-    width: 30vw;
-    height: 90vh;
+    flex-direction: column;
+    width: 60vw;
+    height: max-content;
     background-color: white;
     margin:40px auto;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
     border-radius: 10px;
 }
-
-.formContainer form{
-    display: grid;
-    max-width: 20vw;
-    margin: 0 auto;
-    justify-items: center;
+/* HEADER */
+.header{
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+.headerContainer{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    padding: 0;
+}
+.sellOrRent{
+    margin:0 auto;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+.sellOrRent:hover{
+    cursor: pointer;
+    font-size: 38px;
+    }
+.new{
+    margin:0 auto;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    width: 100%;
+    height: 100%;
 }
 
-.formContainer form input{
+/* Title */
+
+.title{
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+/* FORM */
+.form{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+}
+.propertieOptions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px;
+    width: 100%;
+}
+.optionMenu{
+font-size: 24px;
+text-align: center;
+width: 150px;
+border-radius: 5px;
+margin: 0;
+}
+
+/* .formContainer form input{
     margin: 20px 0;
     height: 50px;
     width: 300px;
     border-color: rgba(122, 206, 233, 1);
-}
-.formContainer form button {
-    background-color: rgba(122, 206, 233, 1);
-    width: 200px;
-    height: 50px;
-    border: none;
-    border-radius: 20px;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-}
-.formContainer form button:hover{
-    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
-    font-size: 26px;
-}
-h2{
-    text-transform: uppercase;
-    
+} */
+
+/* TYPE */
+.typeContainer{
+display: flex;
+flex-direction: column;
+max-width: 100%;
 }
 
-.option {
+/* description */
+.description{
+    width: 100%;
+    height: 100px;
+    margin:50px 0;
+}
+.textArea{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    resize: none;
+    border-radius: 10px;
+}
+
+.freeDetailsParent{
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    max-width: 300px;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin: 50px 0 40px 30px;
+}
+
+.type{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    transform: scale(1.5);
+    width: 100%;
+    margin: 30px;
+
+}
+ /* Price input */
+ .priceWrapper{
+     display: flex;
+     width: 180px;
+    margin:0 80px 30px 0;
+ }
+/* BUTTON */
+.buttonsWrapper{
+   
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.priceLabel{
+    text-align: start;
+    font-size: 36px;
+    font-weight: bold;
+    width: 100px;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+.button {
+    text-transform: uppercase;
     font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(122, 206, 233, 1);
+    width: 150px;
+    height: 60px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 50px;
 }
-.option label {
-    margin-left: 20px;
-    padding-right: 20px ;
-}
-.option input {
-    max-width: 20px;
+
+.price{
+    font-size: 18px;
+    text-align: center;
+    height: 40px;
+    border-radius: 5px;
 }

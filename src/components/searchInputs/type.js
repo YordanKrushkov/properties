@@ -3,11 +3,11 @@ import SearchOpions from './index'
 
 export default {
 
-    TypeSelect(className) {
+    TypeSelect(className, firstLear) {
 
         return (
-            <select name="type" id="type" className={ className }>
-                { SearchOpions('type', '0', 'Show All') }
+            <select name="type" id="type" className={ className}>
+                { SearchOpions('type', '0', firstLear) }
                 { SearchOpions('type', 'flat', 'Flat') }
                 { SearchOpions('type', 'house', 'Houses') }
                 { SearchOpions('type', 'cottage', 'Cottage') }
@@ -16,10 +16,10 @@ export default {
         )
     },
 
-    bedroomCount(className) {
+    bedroomCount(className, firstLear) {
         return (
             <select name="type" id="type" className={ className }>
-                { SearchOpions('type', '0', 'Show All') }
+                { SearchOpions('type', '0', firstLear) }
                 { SearchOpions('bedrooms', 'studio', 'Studio') }
                 { SearchOpions('bedrooms', 'one', '1 bed') }
                 { SearchOpions('bedrooms', 'two', '2 bed') }

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styles from './index.module.css'
-import SearchOpions from '../searchInputs'
 import AllCities from '../searchInputs/cities'
 import Price from '../searchInputs/price'
 import inputs from '../searchInputs/type'
@@ -50,12 +49,12 @@ const Search = () => {
                 <div className={ styles.typeContainer }>
                     <div className={ styles.type }>
                         <label htmlFor="type">Property Type</label>
-                         {inputs.TypeSelect(styles.typeflat)}        
+                         {inputs.TypeSelect(styles.typeflat, 'Show All')}        
                     </div>
 
                     <div className={ styles.type }>
                         <label htmlFor="type">Bedroom</label>
-                        {inputs.bedroomCount(styles.typeflat)}  
+                        {inputs.bedroomCount(styles.typeflat,'Show All')}  
                     </div>
                 </div>
 
