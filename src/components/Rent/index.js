@@ -11,7 +11,7 @@ const Rent = () => {
 
     return (
         <div className={ styles.wrapper } >
-            {getProperties.renderProperties(properties,'rent' ) }
+            {getProperties.renderProperties(properties ) }
         </div>
     )
 }

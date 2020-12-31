@@ -65,16 +65,17 @@ const initialState = []
             details: Object.assign(properties.details, initialState)
         })
         console.log(properties);
-        // let promise = await fetch('https://properties-3e020-default-rtdb.firebaseio.com/properties.json', {
-        //     method: 'POST',
-        //     body: JSON.stringify(properties)
-        // })
-        // let data = await promise.json();
-        // history.push('/');
-        // return data;
+        let promise = await fetch('https://properties-3e020-default-rtdb.firebaseio.com/properties.json', {
+            method: 'POST',
+            body: JSON.stringify(properties)
+        })
+        let data = await promise.json();
+        history.push('/');
+        return data;
 
     }
-    const openWidget = () => {
+    const openWidget = (e) => {
+        e.preventDefault()
         const widget = window.cloudinary.createUploadWidget({
             cloudName: "zltgrd",
             uploadPreset: "properties"

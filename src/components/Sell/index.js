@@ -11,7 +11,7 @@ const Sell = () => {
 
     return (
         <div className={ styles.wrapper } >
-            {getProperties.renderProperties(properties, 'sell') }
+            {getProperties.renderProperties(properties, 'SELL') }
         </div>
     )
 }

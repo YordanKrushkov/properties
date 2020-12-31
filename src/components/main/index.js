@@ -14,7 +14,6 @@ const Body = () => {
             </div>
             <img src={ pic } alt="No pic" />
             <Search />
-            <Card />
         </div>
     )
 }
