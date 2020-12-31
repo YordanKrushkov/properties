@@ -35,7 +35,7 @@ const App=(props)=>{
           <Route path='/register' component={Register}/>
           <Route path='/rent' component={Rent}/>
           <Route path='/sell' component={Sell}/>
-          <Route path='/propertie/:id' component={SingleCard}/>
+          <Route path='/:id' component={SingleCard}/>
           </Switch>
   
   

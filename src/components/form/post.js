@@ -43,13 +43,14 @@ const initialState = []
     const detailHendler = (e) => {
         
         if (e.target.checked) {
-            initialState.push(e.target.value)
+            initialState.push(e.target.name)
         }
         if (!e.target.checked) {
-            let el = initialState.find(el => (el === e.target.value))
+            let el = initialState.find(el => (el === e.target.name))
             let index = initialState.indexOf(el)
             initialState.splice(index, 1)
         }
+        console.log(initialState);
     }
     const submitHandler = async (e) => {
         e.preventDefault();
@@ -64,7 +65,8 @@ const initialState = []
         })
         let data = await promise.json();
         history.push('/');
-        return data;
+        // return data;
+        console.log(properties);
 
     }
     const openWidget = (e) => {
@@ -129,7 +131,7 @@ const initialState = []
                         <div className={ styles.typeContainer }>
                             <div className={ styles.street }>
                                 <label className={ styles.streetLabel } htmlFor="street">Street</label>
-                                <input className={ styles.streetInput } value='' onChange={ onChangeHandler } placeholder="Street" type="text" name='street' id="street" />
+                                <input className={ styles.streetInput }  onChange={ onChangeHandler } placeholder="Street" type="text" name='street' id="street" />
                             </div>
                         </div>
                     </div>
@@ -169,8 +171,9 @@ const initialState = []
                     { elements.InputElements('size', 'text', 'sq.m', '', onChangeHandler) }
                     { elements.InputElements('year', 'text', 'year', '', onChangeHandler) }
                 </div>
+                <form >
                 <div className={ styles.freeDetailsParent }>
-                    <div>
+                <div>
                         { elements.ButtonsField(styles.type, 'checkbox', 'details', 'balcony', 'Balcony', detailHendler) }
                         { elements.ButtonsField(styles.type, 'checkbox', 'details', 'garden', 'Garden', detailHendler) }
                         { elements.ButtonsField(styles.type, 'checkbox', 'details', 'swimmingpool', 'Swimmin gpool', detailHendler) }
@@ -184,10 +187,15 @@ const initialState = []
                         { elements.ButtonsField(styles.type, 'checkbox', 'details', 'parking', 'Free Parking', detailHendler) }
                         { elements.ButtonsField(styles.type, 'checkbox', 'details', 'security', 'Video Security', detailHendler) }
                     </div>
-
                 </div>
+                         <div className={styles.btnParent}>
+                         <button className={ styles.buttonAdd }>Add</button>
+                         </div>  
+                </form>
+                
+
                 <div className={ styles.description }>
-                    <textarea id="description" value='' placeholder='Please, write some description here...' className={ styles.textArea } onChange={onChangeHandler} />
+                    <textarea id="description"  placeholder='Please, write some description here...' className={ styles.textArea } onChange={onChangeHandler} />
                 </div>
 
                 <div className={ styles.buttonsWrapper }>

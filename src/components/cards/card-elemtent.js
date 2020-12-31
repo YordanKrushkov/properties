@@ -1,18 +1,27 @@
-import React from 'react';
+import React,{useState} from 'react';
+import {useParams,useLocation,useHistory  } from 'react-router-dom'
 import pic from '../../images/double-bed.svg'
 import styles from './index.module.css'
 
 const CardElement = (propertie, key) => {
+
+    const history=useHistory()
     let bedrooms = propertie.bedrooms;
     let char = '';
     if (bedrooms) {
         char = bedrooms.charAt(0)
     }
-
+    const id=key;
+   const handleClick=(e)=>{
+       e.preventDefault()
+        history.push(id)
+   }
+  
+    
  
     return (
-        <div className={ styles.parent } key={ key } >
-            <div className={ styles.card } >
+        <div className={ styles.parent } key={ key }onClick={handleClick}>
+            <div className={ styles.card }  >
                 <main>
                     <header className={ styles.header } >
                         <div className={ styles.imgWrapper }>

@@ -64,7 +64,7 @@ export default {
     },
     heating(className, f) {
         return (
-            <select name="heating" id="heating" value='' className={ className } required onChange={f}>
+            <select name="heating" id="heating" className={ className } required onChange={f}>
                 <option value="">Choose</option>
                 { SearchOpions('heating', 'Gas') }
                 { SearchOpions('heating', 'Electricity') }
