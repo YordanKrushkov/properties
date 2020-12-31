@@ -1,187 +1,187 @@
 import React from 'react'
 
 
-const AllCities=(classNeme)=>{
+const AllCities = (classNeme, f) => {
 
-    return(
-        <select name="town" id='town' className={classNeme}>
-<option value="0" selected>Show All</option>
-<option value='city'>София</option>
-<option value='city'>Пловдив</option>
-<option value='city'>Варна</option>
-<option value='city'>Бургас</option>
-<option value='city'>Стара Загора</option>
-<option value='city'>Русе</option>
-<option value='city'>Плевен</option>
-<option value='city'>Айтос</option>
-<option value='city'>Аксаково</option>
-<option value='city'>Антоново</option>
-<option value='city'>Априлци</option>
-<option value='city'>Асеновград</option>
-<option value='city'>Ахтопол</option>
-<option value='city'>Балчик</option>
-<option value='city'>Банкя</option>
-<option value='city'>Банско</option>
-<option value='city'>Баня</option>
-<option value='city'>Батак</option>
-<option value='city'>Белене</option>
-<option value='city'>Белово</option>
-<option value='city'>Белоградчик</option>
-<option value='city'>Белослав</option>
-<option value='city'>Берковица</option>
-<option value='city'>Благоевград</option>
-<option value='city'>Бобов Дол</option>
-<option value='city'>Боровец</option>
-<option value='city'>Ботевград</option>
-<option value='city'>Брезник</option>
-<option value='city'>Бургас</option>
-<option value='city'>Бяла</option>
-<option value='city'>Бяла Слатина</option>
-<option value='city'>Варна</option>
-<option value='city'>Васил Левски</option> 
-<option value='city'>Велико Търново</option>
-<option value='city'>Велинград</option>
-<option value='city'>Видин</option>
-<option value='city'>Враца</option>
-<option value='city'>Вълчедръм</option>
-<option value='city'>Вършец</option>
-<option value='city'>Габрово</option>
-<option value='city'>Генерал Тошево</option>
-<option value='city'>Горна Оряховица</option>
-<option value='city'>Гоце Делчев</option>
-<option value='city'>Гълъбово</option>
-<option value='city'>Две Могили</option>
-<option value='city'>Девин</option>
-<option value='city'>Девня</option>
-<option value='city'>Джебел</option>
-<option value='city'>Димитровград</option>
-<option value='city'>Добрич</option>
-<option value='city'>Долни Дъбник</option>
-<option value='city'>Дряново</option>
-<option value='city'>Дулово</option>
-<option value='city'>Дупница</option>
-<option value='city'>Елена</option>
-<option value='city'>Елин Пелин</option>
-<option value='city'>Елхово</option>
-<option value='city'>Етрополе</option>
-<option value='city'>Златоград</option>
-<option value='city'>Исперих</option>
-<option value='city'>Ихтиман</option>
-<option value='city'>Каварна</option>
-<option value='city'>Казанлък</option>
-<option value='city'>Калофер</option> 
-<option value='city'>Карлово</option>
-<option value='city'>Карнобат</option>
-<option value='city'>Климен</option> 
-<option value='city'>Клисура</option> 
-<option value='city'>Кнежа</option>
-<option value='city'>Козлодуй</option>
-<option value='city'>Копривщица</option> 
-<option value='city'>Костандово</option>
-<option value='city'>Костенец</option>
-<option value='city'>Костинброд</option>
-<option value='city'>Котел</option>
-<option value='city'>Кресна</option>
-<option value='city'>Крумовград</option>
-<option value='city'>Кубрат</option>
-<option value='city'>Кула</option>
-<option value='city'>Кърджали</option>
-<option value='city'>Кюстендил</option>
-<option value='city'>Левски</option>
-<option value='city'>Ловеч</option>
-<option value='city'>Лозница</option>
-<option value='city'>Лом</option>
-<option value='city'>Луковит</option>
-<option value='city'>Любимец</option>
-<option value='city'>Лясковец</option>
-<option value='city'>Мадан</option>
-<option value='city'>Мало Конаре</option>
-<option value='city'>Мездра</option>
-<option value='city'>Момчилград</option>
-<option value='city'>Монтана</option>
-<option value='city'>Несебър</option>
-<option value='city'>Никопол</option>
-<option value='city'>Нова Загора</option>
-<option value='city'>Нови Пазар</option>
-<option value='city'>Оборочище</option>
-<option value='city'>Омуртаг</option>
-<option value='city'>Оряхово</option>
-<option value='city'>Павликени</option>
-<option value='city'>Пазарджик</option>
-<option value='city'>Пампорово</option>
-<option value='city'>Панагюрище</option>
-<option value='city'>Панчарево</option>
-<option value='city'>Перник</option>
-<option value='city'>Петрич</option>
-<option value='city'>Пещера</option>
-<option value='city'>Плевен</option>
-<option value='city'>Пловдив</option>
-<option value='city'>Полски Тръмбеш</option>
-<option value='city'>Поморие</option>
-<option value='city'>Попово</option>
-<option value='city'>Правец</option>
-<option value='city'>Преслав</option>
-<option value='city'>Приморско</option>
-<option value='city'>Провадия</option>
-<option value='city'>Първомай</option>
-<option value='city'>Раднево</option>
-<option value='city'>Радомир</option>
-<option value='city'>Разград</option>
-<option value='city'>Разлог</option>
-<option value='city'>Ракитово</option>
-<option value='city'>Раковски</option>
-<option value='city'>Розино</option>
-<option value='city'>Рудозем</option>
-<option value='city'>Русе</option>
-<option value='city'>Самоков</option>
-<option value='city'>Самуил</option>
-<option value='city'>Сандански</option>
-<option value='city'>Свиленград</option>
-<option value='city'>Свищов</option>
-<option value='city'>Своге</option>
-<option value='city'>Севлиево</option>
-<option value='city'>Септември</option>
-<option value='city'>Силистра</option>
-<option value='city'>Симеоновград</option>
-<option value='city'>Симитли</option>
-<option value='city'>Сливен</option>
-<option value='city'>Сливница</option>
-<option value='city'>Слънчев Бряг</option>
-<option value='city'>Смолян</option>
-<option value='city'>Созопол</option>
-<option value='city'>Сопот</option>
-<option value='city'>София</option>
-<option value='city'>Средец</option>
-<option value='city'>Средногорие</option>
-<option value='city'>Стамболийски</option>
-<option value='city'>Стара Загора</option>
-<option value='city'>Стражица</option>
-<option value='city'>Стралджа</option>
-<option value='city'>Сунгурларе</option>
-<option value='city'>Съединение</option>
-<option value='city'>Твърдица</option>
-<option value='city'>Тервел</option>
-<option value='city'>Тетевен</option>
-<option value='city'>Тополовград</option>
-<option value='city'>Троян</option>
-<option value='city'>Трявна</option>
-<option value='city'>Тутракан</option>
-<option value='city'>Търговище</option>
-<option value='city'>Харманли</option>
-<option value='city'>Хасково</option>
-<option value='city'>Хисаря</option>
-<option value='city'>Царево</option>
-<option value='city'>Цар Калоян</option>
-<option value='city'>Чепеларе</option>
-<option value='city'>Червен Бряг</option>
-<option value='city'>Черноочене</option>
-<option value='city'>Чирпан</option>
-<option value='city'>Шабла</option>
-<option value='city'>Шумен</option>
-<option value='city'>Якоруда</option>
-<option value='city'>Ямбол</option>
-<option value='city'>Завет</option>
-</select>
+    return (
+        <select name="town" id="city" className={ classNeme } onChange={ f }>
+            <option id="city" value="0" selected>Show All</option>
+            <option id="city" value="София">София</option>
+            <option id="city" value="Пловдив">Пловдив</option>
+            <option id="city" value="Варна">Варна</option>
+            <option id="city" value="Бургас">Бургас</option>
+            <option id="city" value="Стара Загора">Стара Загора</option>
+            <option id="city" value="Русе">Русе</option>
+            <option id="city" value="Плевен">Плевен</option>
+            <option id="city" value="Айтос">Айтос</option>
+            <option id="city" value="Аксаково">Аксаково</option>
+            <option id="city" value="Антоново">Антоново</option>
+            <option id="city" value="Априлци">Априлци</option>
+            <option id="city" value="Асеновград">Асеновград</option>
+            <option id="city" value="Ахтопол">Ахтопол</option>
+            <option id="city" value="Балчик">Балчик</option>
+            <option id="city" value="Банкя">Банкя</option>
+            <option id="city" value="Банско">Банско</option>
+            <option id="city" value="Баня">Баня</option>
+            <option id="city" value="Батак">Батак</option>
+            <option id="city" value="Белене">Белене</option>
+            <option id="city" value="Белово">Белово</option>
+            <option id="city" value="Белоградчик">Белоградчик</option>
+            <option id="city" value="Белослав">Белослав</option>
+            <option id="city" value="Берковица">Берковица</option>
+            <option id="city" value="Благоевград">Благоевград</option>
+            <option id="city" value="Бобов Дол">Бобов Дол</option>
+            <option id="city" value="Боровец">Боровец</option>
+            <option id="city" value="Ботевград">Ботевград</option>
+            <option id="city" value="Брезник">Брезник</option>
+            <option id="city" value="Бургас">Бургас</option>
+            <option id="city" value="Бяла">Бяла</option>
+            <option id="city" value="Бяла Слатина">Бяла Слатина</option>
+            <option id="city" value="Варна">Варна</option>
+            <option id="city" value="Васил Левски">Васил Левски </option>
+            <option id="city" value="Велико Търново">Велико Търново</option>
+            <option id="city" value="Велинград">Велинград</option>
+            <option id="city" value="Видин">Видин</option>
+            <option id="city" value="Враца">Враца</option>
+            <option id="city" value="Вълчедръм">Вълчедръм</option>
+            <option id="city" value="Вършец">Вършец</option>
+            <option id="city" value="Габрово">Габрово</option>
+            <option id="city" value="Генерал Тошево">Генерал Тошево</option>
+            <option id="city" value="Горна Оряховица">Горна Оряховица</option>
+            <option id="city" value="Гоце Делчев">Гоце Делчев</option>
+            <option id="city" value="Гълъбово">Гълъбово</option>
+            <option id="city" value="Две Могили">Две Могили</option>
+            <option id="city" value="Девин">Девин</option>
+            <option id="city" value="Девня">Девня</option>
+            <option id="city" value="Джебел">Джебел</option>
+            <option id="city" value="Димитровград">Димитровград</option>
+            <option id="city" value="Добрич">Добрич</option>
+            <option id="city" value="Долни Дъбник">Долни Дъбник</option>
+            <option id="city" value="Дряново">Дряново</option>
+            <option id="city" value="Дулово">Дулово</option>
+            <option id="city" value="Дупница">Дупница</option>
+            <option id="city" value="Елена">Елена</option>
+            <option id="city" value="Елин Пелин">Елин Пелин</option>
+            <option id="city" value="Елхово">Елхово</option>
+            <option id="city" value="Етрополе">Етрополе</option>
+            <option id="city" value="Златоград">Златоград</option>
+            <option id="city" value="Исперих">Исперих</option>
+            <option id="city" value="Ихтиман">Ихтиман</option>
+            <option id="city" value="Каварна">Каварна</option>
+            <option id="city" value="Казанлък">Казанлък</option>
+            <option id="city" value="Калофер">Калофер </option>
+            <option id="city" value="Карлово">Карлово</option>
+            <option id="city" value="Карнобат">Карнобат</option>
+            <option id="city" value="Климен">Климен </option>
+            <option id="city" value="Клисура">Клисура </option>
+            <option id="city" value="Кнежа">Кнежа</option>
+            <option id="city" value="Козлодуй">Козлодуй</option>
+            <option id="city" value="Копривщица">Копривщица </option>
+            <option id="city" value="Костандово">Костандово</option>
+            <option id="city" value="Костенец">Костенец</option>
+            <option id="city" value="Костинброд">Костинброд</option>
+            <option id="city" value="Котел">Котел</option>
+            <option id="city" value="Кресна">Кресна</option>
+            <option id="city" value="Крумовград">Крумовград</option>
+            <option id="city" value="Кубрат">Кубрат</option>
+            <option id="city" value="Кула">Кула</option>
+            <option id="city" value="Кърджали">Кърджали</option>
+            <option id="city" value="Кюстендил">Кюстендил</option>
+            <option id="city" value="Левски">Левски</option>
+            <option id="city" value="Ловеч">Ловеч</option>
+            <option id="city" value="Лозница">Лозница</option>
+            <option id="city" value="Лом">Лом</option>
+            <option id="city" value="Луковит">Луковит</option>
+            <option id="city" value="Любимец">Любимец</option>
+            <option id="city" value="Лясковец">Лясковец</option>
+            <option id="city" value="Мадан">Мадан</option>
+            <option id="city" value="Мало Конаре">Мало Конаре</option>
+            <option id="city" value="Мездра">Мездра</option>
+            <option id="city" value="Момчилград">Момчилград</option>
+            <option id="city" value="Монтана">Монтана</option>
+            <option id="city" value="Несебър">Несебър</option>
+            <option id="city" value="Никопол">Никопол</option>
+            <option id="city" value="Нова Загора">Нова Загора</option>
+            <option id="city" value="Нови Пазар">Нови Пазар</option>
+            <option id="city" value="Оборочище">Оборочище</option>
+            <option id="city" value="Омуртаг">Омуртаг</option>
+            <option id="city" value="Оряхово">Оряхово</option>
+            <option id="city" value="Павликени">Павликени</option>
+            <option id="city" value="Пазарджик">Пазарджик</option>
+            <option id="city" value="Пампорово">Пампорово</option>
+            <option id="city" value="Панагюрище">Панагюрище</option>
+            <option id="city" value="Панчарево">Панчарево</option>
+            <option id="city" value="Перник">Перник</option>
+            <option id="city" value="Петрич">Петрич</option>
+            <option id="city" value="Пещера">Пещера</option>
+            <option id="city" value="Плевен">Плевен</option>
+            <option id="city" value="Пловдив">Пловдив</option>
+            <option id="city" value="Полски Тръмбеш">Полски Тръмбеш</option>
+            <option id="city" value="Поморие">Поморие</option>
+            <option id="city" value="Попово">Попово</option>
+            <option id="city" value="Правец">Правец</option>
+            <option id="city" value="Преслав">Преслав</option>
+            <option id="city" value="Приморско">Приморско</option>
+            <option id="city" value="Провадия">Провадия</option>
+            <option id="city" value="Първомай">Първомай</option>
+            <option id="city" value="Раднево">Раднево</option>
+            <option id="city" value="Радомир">Радомир</option>
+            <option id="city" value="Разград">Разград</option>
+            <option id="city" value="Разлог">Разлог</option>
+            <option id="city" value="Ракитово">Ракитово</option>
+            <option id="city" value="Раковски">Раковски</option>
+            <option id="city" value="Розино">Розино</option>
+            <option id="city" value="Рудозем">Рудозем</option>
+            <option id="city" value="Русе">Русе</option>
+            <option id="city" value="Самоков">Самоков</option>
+            <option id="city" value="Самуил">Самуил</option>
+            <option id="city" value="Сандански">Сандански</option>
+            <option id="city" value="Свиленград">Свиленград</option>
+            <option id="city" value="Свищов">Свищов</option>
+            <option id="city" value="Своге">Своге</option>
+            <option id="city" value="Севлиево">Севлиево</option>
+            <option id="city" value="Септември">Септември</option>
+            <option id="city" value="Силистра">Силистра</option>
+            <option id="city" value="Симеоновград">Симеоновград</option>
+            <option id="city" value="Симитли">Симитли</option>
+            <option id="city" value="Сливен">Сливен</option>
+            <option id="city" value="Сливница">Сливница</option>
+            <option id="city" value="Слънчев Бряг">Слънчев Бряг</option>
+            <option id="city" value="Смолян">Смолян</option>
+            <option id="city" value="Созопол">Созопол</option>
+            <option id="city" value="Сопот">Сопот</option>
+            <option id="city" value="София">София</option>
+            <option id="city" value="Средец">Средец</option>
+            <option id="city" value="Средногорие">Средногорие</option>
+            <option id="city" value="Стамболийски">Стамболийски</option>
+            <option id="city" value="Стара Загора">Стара Загора</option>
+            <option id="city" value="Стражица">Стражица</option>
+            <option id="city" value="Стралджа">Стралджа</option>
+            <option id="city" value="Сунгурларе">Сунгурларе</option>
+            <option id="city" value="Съединение">Съединение</option>
+            <option id="city" value="Твърдица">Твърдица</option>
+            <option id="city" value="Тервел">Тервел</option>
+            <option id="city" value="Тетевен">Тетевен</option>
+            <option id="city" value="Тополовград">Тополовград</option>
+            <option id="city" value="Троян">Троян</option>
+            <option id="city" value="Трявна">Трявна</option>
+            <option id="city" value="Тутракан">Тутракан</option>
+            <option id="city" value="Търговище">Търговище</option>
+            <option id="city" value="Харманли">Харманли</option>
+            <option id="city" value="Хасково">Хасково</option>
+            <option id="city" value="Хисаря">Хисаря</option>
+            <option id="city" value="Царево">Царево</option>
+            <option id="city" value="Цар Калоян">Цар Калоян</option>
+            <option id="city" value="Чепеларе">Чепеларе</option>
+            <option id="city" value="Червен Бряг">Червен Бряг</option>
+            <option id="city" value="Черноочене">Черноочене</option>
+            <option id="city" value="Чирпан">Чирпан</option>
+            <option id="city" value="Шабла">Шабла</option>
+            <option id="city" value="Шумен">Шумен</option>
+            <option id="city" value="Якоруда">Якоруда</option>
+            <option id="city" value="Ямбол">Ямбол</option>
+            <option id="city" value="Завет">Завет</option>
+        </select>
     )
 }
 

@@ -10,7 +10,7 @@ const Search = () => {
 
     const clickHendler = (e) => {
         changeOption(e.target.textContent)
-        if (e.target.textContent == 'SELL') {
+        if (e.target.textContent === 'SELL') {
             changeStyle(false)
         } else {
             changeStyle(true)
@@ -32,14 +32,14 @@ const Search = () => {
                     { AllCities(styles.options) }
                 </div>
 
-                { way == "RENT" ? (<div className={ styles.imputs } >
+                { way === "RENT" ? (<div className={ styles.imputs } >
                     <label htmlFor="price">Min.Price</label>
                     {Price.RentingPrice("minPrice", styles.options) } </div>) :
                     (<div className={ styles.imputs } >
                         <label htmlFor="price">Min.Price</label>
                         {Price.SellingPrice("minPrice", styles.options) } </div>) }
 
-                { way == "RENT" ? (<div className={ styles.imputs } >
+                { way === "RENT" ? (<div className={ styles.imputs } >
                     <label htmlFor="price">Max.Price</label>
                     {Price.RentingPrice("minPrice", styles.options) } </div>) :
                     (<div className={ styles.imputs } >
