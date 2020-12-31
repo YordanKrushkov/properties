@@ -3,6 +3,7 @@ import styles from './index.module.css'
 import img from '../../images/istockphoto-1026205392-612x612.jpg'
 import bed from '../../images/bed.svg'
 import bath from '../../images/bath.svg'
+import getProperties from '../../services/getData';
 const SingleCard = () => {
 
 

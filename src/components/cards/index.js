@@ -6,12 +6,12 @@ const Card = () => {
 
 
     useEffect(() => {
-       getProperties.getData(takeProperties)
+        getProperties.getData(takeProperties)
     }, [])
 
     return (
         <div className={ styles.wrapper } >
-            {getProperties.renderProperties(properties, 'home') }
+            {getProperties.renderProperties(properties, 'HOME') }
         </div>
 
     )

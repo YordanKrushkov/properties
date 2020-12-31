@@ -7,7 +7,7 @@ export default {
     SellingPrice(minOrMax, classNeme) {
 
         return (
-            <select name="price" id={ minOrMax } className={ classNeme }>
+            <select name="price" id={ minOrMax } value='' className={ classNeme }>
                 <option value="0" selected>Alll</option>
                 <option value="money">10 000</option>
                 <option value="money">20 000</option>
@@ -47,7 +47,7 @@ export default {
     RentingPrice(minOrMax, classNeme) {
 
         return (
-            <select name="price" id={ minOrMax } className={ classNeme }>
+            <select name="price" id={ minOrMax } value='' className={ classNeme }>
                 <option value="0" selected>Alll</option>
                 <option value="money">100</option>
                 <option value="money">200</option>

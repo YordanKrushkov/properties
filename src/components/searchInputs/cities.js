@@ -4,7 +4,7 @@ import React from 'react'
 const AllCities = (classNeme, f) => {
 
     return (
-        <select name="town" id="city" className={ classNeme } onChange={ f }>
+        <select name="town" id="city" value='' className={ classNeme } onChange={ f }>
             <option id="city" value="0" selected>Show All</option>
             <option id="city" value="София">София</option>
             <option id="city" value="Пловдив">Пловдив</option>

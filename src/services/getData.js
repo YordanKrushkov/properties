@@ -8,17 +8,24 @@ export default {
     },
     renderProperties(properties, filter) {
         return Object.keys(properties).map((propertie) => {
-            if (properties[propertie].hasOwnProperty('sellOrRent')) {
-                let log = 'sellOrRent';
-                if (properties[propertie][log] == filter) {
+                console.log(properties[propertie].sellOrRent);
+                if (properties[propertie].sellOrRent === filter) {
                     let item = properties[propertie]
                     let key = propertie;
                     return CardElement(item, key)
-                } else {
+                } else if(filter==='HOME'){
                     let item = properties[propertie]
                     let key = propertie;
                     return CardElement(item, key)
+                }else{
+                    return
                 }
-            }})
+            })
+    },   
+
+    async getSingleProp(getProperties,id){
+        const promise = await fetch(`https://properties-3e020-default-rtdb.firebaseio.com/properties/${id}.json`);
+        const properties = await promise.json();
+        getProperties(properties)
     }
 }
