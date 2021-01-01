@@ -11,6 +11,7 @@ import Sell from './Pages/Sell';
 import {useContext } from 'react';
 import UserContext from './Context';
 import SingleCard from './Pages/DetailsPage'
+import Profile from './Pages/Profile'
 
 const App=(props)=>{
   const context=useContext(UserContext);
@@ -35,6 +36,7 @@ const App=(props)=>{
           <Route path='/register' component={Register}/>
           <Route path='/rent' component={Rent}/>
           <Route path='/sell' component={Sell}/>
+          <Route path='/profile' component={Profile}/>
           <Route path='/:id' component={SingleCard}/>
           </Switch>
   

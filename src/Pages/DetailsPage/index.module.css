@@ -2,22 +2,21 @@
     width: 90vw;
     display: flex;
     justify-content: space-between;
-    margin:40px auto;
+    margin: 40px auto;
 }
-.propertieInfo{
+.propertieInfo {
     width: 95%;
 }
-.images{
+.images {
     width: 93%;
-
 }
-.header{
+.header {
     display: flex;
     justify-content: flex-start;
     max-width: 93%;
     width: 100%;
 }
-.ul{
+.ul {
     width: 100%;
     height: 80px;
     display: flex;
@@ -28,130 +27,61 @@
     background-color: lightblue;
     margin: 0px;
 }
-.li{
-    font-size:24px;
+.li {
+    font-size: 24px;
     font-weight: bold;
     height: 100%;
     width: 100%;
-    
-   display: flex;
-   align-items: center;
-   justify-content: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
 }
-.new{
-    font-size:24px;
+.new {
+    font-size: 24px;
     font-weight: bold;
     height: 100%;
     width: 100%;
-    
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background-color: white;
-   color: black;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
 }
 
-.li:hover{
-
+.li:hover {
     cursor: pointer;
 }
 
-.infoContainers{
-    margin:0px;
-    background-color: white;
-    width: 100%;
-    max-width: 93%;
-    height: 100%;
-}
-
-.details{
-    font-size: 24px;
-}
-
-.floorplan{
-    font-size: 24px;
-    display: none;
-}
-
-.map{
-    display: none;
-}
-.moreInfo{
-    display: none;
-}
-.iconsParents{
-    padding: 40px;
-    margin:0 auto;
-    width: 60%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items:center;
-}
-.icons{
-    display: flex;
-    align-items:center;
-    margin-right: 20px;
-}
-
-.iconsPic{
-    width: 32px;
-    margin-right: 10px;
-}
-
-.detailsList{
-    width: 90%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    /* margin-left: 40px; */
-    margin:0 auto;
-}
-.detLi{
-    margin: 10px 40px;
-}
-
-.h2{
-    text-align: center;
-}
-.descriptionBody{
-    text-align:center;
-}
-
-.p{
-    text-align: center;
-    padding: 10px 30px 40px 30px;
-}
-
-.lender{
+.lender {
     background-color: white;
     max-width: 30%;
     width: 100%;
     height: 100%;
     max-height: 50%;
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
-.asideHeader{
-    display:flex;
+.asideHeader {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
-.propertieCardInfo{
+.propertieCardInfo {
     display: flex;
     justify-content: center;
     margin-top: 40px;
 }
-.button{
+.button {
     width: 350px;
     height: 50px;
     margin: 20px auto;
     border-radius: 20px;
-    border:none;
-    color:white;
-    background-color:lightblue;
+    border: none;
+    color: white;
+    background-color: lightblue;
 }

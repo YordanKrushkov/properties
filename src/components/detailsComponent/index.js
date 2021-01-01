@@ -42,11 +42,11 @@ return(
 
                             </div>
                         </div>
-                        <div id='floorplanField' className={ styles.floorplan }> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo laudantium suscipit dolorum excepturi voluptates nobis placeat ex itaque nihil soluta?
+                        <div id='floorplanField' className={ styles.floorplan }>
                         </div>
-                        <div id='mapField' className={ styles.map }> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo laudantium suscipit dolorum excepturi voluptates nobis placeat ex itaque nihil soluta?
+                        <div id='mapField' className={ styles.map }> 
                         </div>
-                        <div id='infoField' className={ styles.moreInfo }> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo laudantium suscipit dolorum excepturi voluptates nobis placeat ex itaque nihil soluta?
+                        <div id='infoField' className={ styles.moreInfo }>
                         </div>
                     </div>
 )
