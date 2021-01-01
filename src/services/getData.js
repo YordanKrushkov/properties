@@ -7,6 +7,7 @@ export default {
         getProperties(properties)
     },
     renderProperties(properties, filter) {
+        if(properties){
         return Object.keys(properties).map((propertie) => {
                 console.log(properties[propertie].sellOrRent);
                 if (properties[propertie].sellOrRent === filter) {
@@ -20,7 +21,9 @@ export default {
                 }else{
                     return
                 }
-            })
+            })}else{
+                return <h1> No data</h1>
+            }
     },   
 
     async getSingleProp(getProperties,id){

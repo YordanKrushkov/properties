@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom'
 import styles from './index.module.css'
-import img from '../../images/istockphoto-1026205392-612x612.jpg'
 import bed from '../../images/bed.svg'
 import bath from '../../images/bath.svg'
 import getProperties from '../../services/getData';
 const SingleCard = () => {
-    const [properties, takeProperties] = useState([])
+    const [properties, takeProperties] = useState([]);
+    const [style, changeStyle] = useState('');
     const history = useHistory()
     const id = history.location.pathname;
     useEffect(() => {
@@ -19,17 +19,29 @@ const SingleCard = () => {
         char = bedrooms.charAt(0)
     }
 
+    const handleClick=(e)=>{
+        console.log(e.target.textContent);
+        if (e.target.textContent === 'Property Details') {
+            console.log('yes');
+            changeStyle(false)
+        } else {
+            changeStyle(true);
+        
+        }
+    } 
+
+    console.log(properties.details);
     return (
         <div className={ styles.conteiner }>
             <div className={ styles.propertieInfo }>
-                <img className={ styles.images } src={ img } alt="img" />
+                <img className={ styles.images } src={ properties.img } alt="img" />
                 <div className={ styles.info }>
                     <header className={ styles.header }>
-                        <ul className={ styles.ul }>
-                            <li className={ styles.li }><a href="/details" className={ styles.link }>Property Details</a></li>
-                            <li className={ styles.li }><a href="/floorplan" className={ styles.link }>Floorplan</a></li>
-                            <li className={ styles.li }><a href="/map" className={ styles.link }>Map</a></li>
-                            <li className={ styles.li }><a href="/moreinfo" className={ styles.link }>More info</a></li>
+                        <ul className={ styles.ul }> 
+                            <li className={ styles.li } onClick={handleClick}>Property Details</li>
+                            <li className={ styles.li }><a href="/floorplan" className={ styles.link } onClick={handleClick} >Floorplan</a></li>
+                            <li className={ styles.li }><a href="/map" className={ styles.link } onClick={handleClick} >Map</a></li>
+                            <li className={ styles.li }><a href="/moreinfo" className={ styles.link } onClick={handleClick} >More info</a></li>
                         </ul>
                     </header>
                     <div className={ styles.infoContainers }>
@@ -48,12 +60,9 @@ const SingleCard = () => {
                                 <h2 className={ styles.h2 }>Details</h2>
 
                                 <ul className={ styles.detailsList }>
-                                    <li className={ styles.detLi }>Lorem ipsum dolor sit amet.</li>
-                                    <li className={ styles.detLi }>Lorem ipsum dolor sit amet.</li>
-                                    <li className={ styles.detLi }>Lorem ipsum dolor sit amet.</li>
-                                    <li className={ styles.detLi }>Lorem ipsum dolor sit amet.</li>
-                                    <li className={ styles.detLi }>Lorem ipsum dolor sit amet.</li>
-                                    <li className={ styles.detLi }>Lorem ipsum dolor sit amet.</li>
+
+                                {properties.details ? (properties.details.map(e=>{
+                                    return <li className={ styles.detLi }>{e}</li>})): null}
                                 </ul>
                             </div>
                             <div className={ styles.description }>

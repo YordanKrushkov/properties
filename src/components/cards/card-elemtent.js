@@ -1,5 +1,5 @@
-import React,{useState} from 'react';
-import {useParams,useLocation,useHistory  } from 'react-router-dom'
+import React from 'react';
+import {useHistory  } from 'react-router-dom'
 import pic from '../../images/double-bed.svg'
 import styles from './index.module.css'
 

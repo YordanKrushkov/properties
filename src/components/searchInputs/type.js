@@ -9,7 +9,7 @@ export default {
             <select name="type" id="type" className={ className }  onChange={f} required>
                 <option value="">Choose</option>
                 { SearchOpions('type',  'Flat') }
-                { SearchOpions('type', 'Houses') }
+                { SearchOpions('type', 'House') }
                 { SearchOpions('type', 'Cottage') }
                 { SearchOpions('type', 'Land') }
             </select>
