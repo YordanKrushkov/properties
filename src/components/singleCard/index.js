@@ -6,7 +6,8 @@ import bath from '../../images/bath.svg'
 import getProperties from '../../services/getData';
 const SingleCard = () => {
     const [properties, takeProperties] = useState([]);
-    const [style, changeStyle] = useState('');
+    
+    const [first, changeFitst] = useState(styles.new);
     const history = useHistory()
     const id = history.location.pathname;
     useEffect(() => {
@@ -18,16 +19,56 @@ const SingleCard = () => {
     if (bedrooms) {
         char = bedrooms.charAt(0)
     }
+    const style = styles.li
 
     const handleClick=(e)=>{
-        console.log(e.target.textContent);
-        if (e.target.textContent === 'Property Details') {
-            console.log('yes');
-            changeStyle(false)
-        } else {
-            changeStyle(true);
-        
+        const details=document.getElementById('details');
+        const floorplan=document.getElementById('floorplan');
+        const map=document.getElementById('map');
+        const info=document.getElementById('info');
+        if(e.target===details){
+         details.classList.add(styles.new)
+         details.classList.remove(styles.li)
+         document.getElementById('detailsField').style.display='block'
+
+        }else{
+         details.classList.add(styles.li)
+         details.classList.remove(styles.new)
+         document.getElementById('detailsField').style.display='none'
         }
+        
+        if(e.target===map){
+            map.classList.add(styles.new)
+            map.classList.remove(styles.li)
+            document.getElementById('mapField').style.display='block'
+           }else{
+            map.classList.add(styles.li)
+            map.classList.remove(styles.new)
+            document.getElementById('mapField').style.display='none'
+
+           }
+
+           if(e.target===floorplan){
+            floorplan.classList.add(styles.new)
+            floorplan.classList.remove(styles.li)
+            document.getElementById('floorplanField').style.display='block'
+           }else{
+            floorplan.classList.add(styles.li)
+            floorplan.classList.remove(styles.new)
+            document.getElementById('floorplanField').style.display='none'
+
+           }
+           if(e.target===info){
+            info.classList.add(styles.new)
+            info.classList.remove(styles.li)
+            document.getElementById('infoField').style.display='block'
+
+           }else{
+            info.classList.add(styles.li)
+            info.classList.remove(styles.new)
+            document.getElementById('infoField').style.display='none'
+
+           }
     } 
 
     console.log(properties.details);
@@ -37,15 +78,15 @@ const SingleCard = () => {
                 <img className={ styles.images } src={ properties.img } alt="img" />
                 <div className={ styles.info }>
                     <header className={ styles.header }>
-                        <ul className={ styles.ul }> 
-                            <li className={ styles.li } onClick={handleClick}>Property Details</li>
-                            <li className={ styles.li }><a href="/floorplan" className={ styles.link } onClick={handleClick} >Floorplan</a></li>
-                            <li className={ styles.li }><a href="/map" className={ styles.link } onClick={handleClick} >Map</a></li>
-                            <li className={ styles.li }><a href="/moreinfo" className={ styles.link } onClick={handleClick} >More info</a></li>
+                        <ul className={ styles.ul } onClick={handleClick}> 
+                            <li id='details'  className={style} >Property Details</li>
+                            <li id='floorplan' className={style} >Floorplan</li>
+                            <li id='map' className={ style } >Map</li>
+                            <li id='info' className={ style} >More info</li>
                         </ul>
                     </header>
                     <div className={ styles.infoContainers }>
-                        <div className={ styles.details }>
+                        <div id='detailsField' className={ styles.details }>
                             <div className={ styles.iconsParents }>
                                 <div className={ styles.icons }>
                                     <img className={ styles.iconsPic } src={ bed } alt="bed" />
@@ -73,11 +114,11 @@ const SingleCard = () => {
 
                             </div>
                         </div>
-                        <div className={ styles.floorplan }> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo laudantium suscipit dolorum excepturi voluptates nobis placeat ex itaque nihil soluta?
+                        <div id='floorplanField' className={ styles.floorplan }> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo laudantium suscipit dolorum excepturi voluptates nobis placeat ex itaque nihil soluta?
                         </div>
-                        <div className={ styles.map }> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo laudantium suscipit dolorum excepturi voluptates nobis placeat ex itaque nihil soluta?
+                        <div id='mapField' className={ styles.map }> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo laudantium suscipit dolorum excepturi voluptates nobis placeat ex itaque nihil soluta?
                         </div>
-                        <div className={ styles.moreInfo }> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo laudantium suscipit dolorum excepturi voluptates nobis placeat ex itaque nihil soluta?
+                        <div id='infoField' className={ styles.moreInfo }> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo laudantium suscipit dolorum excepturi voluptates nobis placeat ex itaque nihil soluta?
                         </div>
                     </div>
                 </div>
