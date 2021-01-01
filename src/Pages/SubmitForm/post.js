@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import styles from './index.module.css'
-import AllCities from '../searchInputs/cities'
-import elements from '../formElements/inputs'
-import inputs from '../searchInputs/type'
+import AllCities from '../../components/searchInputs/cities'
+import elements from '../../components/formElements/inputs'
+import inputs from '../../components/searchInputs/type'
 const PostForm = () => {
 
     const [initialState, getState]=useState([])

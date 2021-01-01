@@ -1,16 +1,16 @@
 
 import './App.css';
 import Header from './components/Header'
-import Body from './components/main'
-import PostForm from './components/form/post'
+import Body from './Pages/HomePage'
+import PostForm from './Pages/SubmitForm/post'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Login from './components/login'
-import Register from './components/Register'
-import Rent from './components/Rent'
-import Sell from './components/Sell';
+import Login from './Pages/login'
+import Register from './Pages/Register'
+import Rent from './Pages/Rent'
+import Sell from './Pages/Sell';
 import {useContext } from 'react';
 import UserContext from './Context';
-import SingleCard from './components/singleCard'
+import SingleCard from './Pages/DetailsPage'
 
 const App=(props)=>{
   const context=useContext(UserContext);

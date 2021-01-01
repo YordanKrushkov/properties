@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './index.module.css'
 import pic from '../../images/istockphoto-1026205392-612x612.jpg'
-import Search from '../searchBar'
-import Card from '../cards'
+import Search from '../../components/searchBar'
+import Card from '../../components/cards'
 const Body = () => {
     return (
         <div className={ styles.container }>
