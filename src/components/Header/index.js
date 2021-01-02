@@ -10,19 +10,17 @@ const Header = () => {
     let nav;
     const { loggedIn } = context
     if (loggedIn) {
-        nav = <ul>
-        <li><Link to="/profile">Profile</Link></li>
-            <li><Link to="/post">Post</Link></li>
-            <li><Link to="/rent">For Rent</Link></li>
-            <li><Link to="/sell">For Sell</Link></li>
-            <li> <Link to="/signout" className={ styles.login } onClick={ onLogout }>SignOut</Link> </li>
+        nav = <ul className={styles.ul}>
+            <li className={styles.li}><Link to="/post">Post</Link></li>
+            <li className={styles.li}><Link to="/rent">For Rent</Link></li>
+            <li className={styles.li}><Link to="/sell">For Sell</Link></li>
+            <li className={styles.li}> <Link to="/signout" className={ styles.login } onClick={ onLogout }>SignOut</Link> </li>
         </ul>
     } else {
-        nav = <ul>
-            <li><Link to="/rent">For Rent</Link></li>
-            <li><Link to="/sell">For Sell</Link></li>
-            <li><Link to="/contacts">Contacts</Link></li>
-            <li> <Link to="/login" className={ styles.login } >LOGIN</Link> </li>
+        nav = <ul className={styles.ul}>
+            <li className={styles.li}><Link to="/rent">For Rent</Link></li>
+            <li className={styles.li}><Link to="/sell">For Sell</Link></li>
+            <li className={styles.li}> <Link to="/login" className={ styles.login } >LOGIN</Link> </li>
         </ul>
     }
     return (

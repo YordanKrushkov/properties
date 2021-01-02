@@ -7,11 +7,11 @@ export default {
 
         return (
             <select name="type" id="type" className={ className }  onChange={f} required>
-                <option value="">Choose</option>
-                { SearchOpions('type',  'Flat') }
-                { SearchOpions('type', 'House') }
-                { SearchOpions('type', 'Cottage') }
-                { SearchOpions('type', 'Land') }
+                <option value="0">Choose</option>
+                { SearchOpions('type',  'Flat', null) }
+                { SearchOpions('type', 'House', null) }
+                { SearchOpions('type', 'Cottage', null) }
+                { SearchOpions('type', 'Land', null) }
             </select>
         )
     },
@@ -19,12 +19,12 @@ export default {
     bedroomCount(className,f) {
         return (
             <select name="type" id="bedrooms" className={ className }  onChange={f} required>
-                <option value="">Choose</option>
-                { SearchOpions('bedrooms', 'studio', 'Studio') }
-                { SearchOpions('bedrooms', '1 bedroom', ) }
-                { SearchOpions('bedrooms', '2 bedroom', ) }
-                { SearchOpions('bedrooms', '3 bedroom', ) }
-                { SearchOpions('bedrooms', '4 bedroom', ) }
+                <option value="0">Choose</option>
+                { SearchOpions('bedrooms', 'studio', 'Studio', null) }
+                { SearchOpions('bedrooms', '1 bedroom', null) }
+                { SearchOpions('bedrooms', '2 bedroom', null) }
+                { SearchOpions('bedrooms', '3 bedroom',null ) }
+                { SearchOpions('bedrooms', '4 bedroom',null ) }
             </select>
         )
 
@@ -32,11 +32,11 @@ export default {
     construction(className, f) {
         return (
             <select name="construction" id="construction" className={ className } required onChange={f}>
-                <option value="">Choose</option>
-                { SearchOpions('construction',  'New') }
-                { SearchOpions('construction', 'Old') }
-                { SearchOpions('construction', 'Brick') }
-                { SearchOpions('construction', 'Panel') }
+                <option value="0">Choose</option>
+                { SearchOpions('construction',  'New',null) }
+                { SearchOpions('construction', 'Old',null) }
+                { SearchOpions('construction', 'Brick',null) }
+                { SearchOpions('construction', 'Panel',null) }
             </select>
         )
 
@@ -44,31 +44,31 @@ export default {
     floor(className,op,f) {
         return (
             <select name="floor" id={"floor"+op} className={ className } required onChange={f}>
-                <option value="">Choose</option>
-                { SearchOpions('floor',  '1') }
-                { SearchOpions('floor', '2') }
-                { SearchOpions('floor',  '3') }
-                { SearchOpions('floor',  '4') }
+                <option value="0">Choose</option>
+                { SearchOpions('floor',  '1',null) }
+                { SearchOpions('floor', '2',null) }
+                { SearchOpions('floor',  '3',null) }
+                { SearchOpions('floor',  '4',null) }
             </select>
         )
     },
     furniture(className,f) {
         return (
             <select name="furnished" id="furnished" className={ className } required onChange={f}>
-                <option value="">Choose</option>
-                { SearchOpions('furnished', 'Furnished') }
-                { SearchOpions('furnished',  'Part-furnished') }
-                { SearchOpions('furnished', 'Not furnished') }
+                <option value="0">Choose</option>
+                { SearchOpions('furnished', 'Furnished',null) }
+                { SearchOpions('furnished',  'Part-furnished',null) }
+                { SearchOpions('furnished', 'Not furnished',null) }
             </select>
         )
     },
     heating(className, f) {
         return (
             <select name="heating" id="heating" className={ className } required onChange={f}>
-                <option value="">Choose</option>
-                { SearchOpions('heating', 'Gas') }
-                { SearchOpions('heating', 'Electricity') }
-                { SearchOpions('heating','Local') }
+                <option value="0">Choose</option>
+                { SearchOpions('heating', 'Gas', null) }
+                { SearchOpions('heating', 'Electricity', null) }
+                { SearchOpions('heating','Local', null) }
             </select>
         )
     },

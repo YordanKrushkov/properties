@@ -6,16 +6,18 @@
     display: flex;
     justify-content: space-between;
 }
-.container ul{
+.ul{
     display: flex;
     align-items: center;
     margin-right: 28px;
 }
-.container ul li {
+.li {
     display: inline;
-    margin-right: 28px;
+    margin-right: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
-.container ul li:hover{
+.li:hover{
     font-weight: bold;
     padding-bottom: 10px;
     border-bottom: 2px solid white;

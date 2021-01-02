@@ -6,10 +6,10 @@ import styles from './index.module.css'
 const CardElement = (propertie, key) => {
 
     const history=useHistory()
-    let bedrooms = propertie.bedrooms;
+   
     let char = '';
-    if (bedrooms) {
-        char = bedrooms.charAt(0)
+    if (propertie.bedrooms) {
+        char = propertie.bedrooms.charAt(0)
     }
     const id=key;
    const handleClick=(e)=>{

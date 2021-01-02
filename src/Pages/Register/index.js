@@ -20,7 +20,7 @@ const Register = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        const { email, password, repassword} = user
+        const { email, password, repassword } = user
         if (password.length < 6 || password !== repassword) {
             return;
         }
@@ -36,6 +36,7 @@ const Register = () => {
             .catch((e) => {
                 console.log(e);
             })
+
     }
     return (
         <div className={ styles.container }>
@@ -45,18 +46,12 @@ const Register = () => {
                 <div className={ styles.formWrapper }>
                     <div className={ styles.inputWrapper }>
                         <div className={ styles.fieldWrapper }>
-                            <label htmlFor="name">Name</label>
-                            <input type="text" name="" id="name" onChange={ chnageHendler } required />
+                            <label htmlFor="email">Email</label>
+                            <input type="email" name="" id="email" onChange={ chnageHendler } required />
                         </div>
                         <div className={ styles.fieldWrapper }>
                             <label htmlFor="password">Password</label>
                             <input type="password" name="" id="password" onChange={ chnageHendler } required />
-                        </div>
-                    </div>
-                    <div className={ styles.inputWrapper }>
-                        <div className={ styles.fieldWrapper }>
-                            <label htmlFor="email">Email</label>
-                            <input type="email" name="" id="email" onChange={ chnageHendler } required />
                         </div>
 
                         <div className={ styles.fieldWrapper }>

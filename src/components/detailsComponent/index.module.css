@@ -29,14 +29,29 @@
 }
 
 .detailsList {
-    width: 90%;
+    height: 250px;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-left: 80px;
+}
+.moreDetailsList {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
     flex-wrap: wrap;
     /* margin-left: 40px; */
-    margin: 0 auto;
+    margin: 0 20px;
 }
-
+.infoBody{
+    width: 90%;
+    margin:0 auto;
+}
 .floorplan {
     font-size: 24px;
     display: none;
@@ -50,7 +65,8 @@
 }
 
 .detLi {
-    margin: 10px 40px;
+    margin: 10px 30px;
+    font-size: 36px;
 }
 
 .h2 {
@@ -63,10 +79,15 @@
 .p {
     text-align: center;
     padding: 10px 30px 40px 30px;
+    font-size: 32px;
 }
 
 .propertieCardInfo {
     display: flex;
     justify-content: center;
     margin-top: 40px;
+}
+
+.span{
+    font-size: 36px;
 }

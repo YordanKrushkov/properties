@@ -1,4 +1,4 @@
-import  { Component } from 'react'
+import { Component } from 'react'
 import UserContext from './Context'
 
 class UseState extends Component {
@@ -6,18 +6,16 @@ class UseState extends Component {
     state = {
         loggedIn: false,
         email: '',
-        
+        id: '',
     }
 
     logIn = (email) => {
         this.setState({
             loggedIn: true,
-            email:email,
-           
+            email: email,
         })
-        console.log(this.state);
-    }
 
+    }
     logOut = () => {
         document.cookie = 'x-auth-token=';
         localStorage.removeItem('user')
@@ -34,17 +32,18 @@ class UseState extends Component {
                 email: localStorage.getItem('user'),
             })
         } else {
-                this.setState({
-                loggedIn:false,
-                email:null,
+            this.setState({
+                loggedIn: false,
+                email: null,
             })
-        }};
+        }
+    };
 
     render() {
         const {
             loggedIn,
-            email 
-            } = this.state
+            email
+        } = this.state
         if (loggedIn === null) {
             <div>Loading...</div>
         }
@@ -53,7 +52,7 @@ class UseState extends Component {
                 loggedIn,
                 email,
                 logIn: this.logIn,
-                logOut: this.logOut
+                logOut: this.logOut,
             } }>
                 {this.props.children }
             </UserContext.Provider>

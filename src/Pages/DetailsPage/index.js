@@ -67,6 +67,7 @@ const SingleCard = () => {
 
         }
     }
+    
 
     console.log(properties.details);
     return (

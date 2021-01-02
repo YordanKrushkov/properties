@@ -40,9 +40,9 @@ max-width: 600px;
 .fieldWrapper{
     max-width: 450px;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items:center;
-margin:40px
+    margin:15px
 
 }
 .formBody label {

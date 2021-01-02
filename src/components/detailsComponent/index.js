@@ -17,18 +17,28 @@ return(
                             <div className={ styles.iconsParents }>
                                 <div className={ styles.icons }>
                                     <img className={ styles.iconsPic } src={ bed } alt="bed" />
-                                    <span>{ properties.bedrooms }</span>
+                                    <span className={styles.span}>{ properties.bedrooms }</span>
                                 </div>
                                 <div className={ styles.icons }>
                                     <img className={ styles.iconsPic } src={ bath } alt="bed" />
-                                    <span>1 bathroom</span>
+                                    <span className={styles.span}>1 bathroom</span>
                                 </div>
                             </div>
+                            <div className={ styles.infoBody }>
+                            <h2 className={ styles.h2 }>Details</h2>
+                            <ul className={ styles.detailsList }>
+                                <li className={ styles.detLi }>Size: {properties.size} sq.m</li>
+                                <li className={ styles.detLi }>Heating: {properties.heating}</li>
+                                <li className={ styles.detLi }>{properties.furnished}</li>
+                                <li className={ styles.detLi }>Construction: {properties.construction}</li>
+                                <li className={ styles.detLi }>Floor: {properties.floormax}</li>
+                                <li className={ styles.detLi }>Year: {properties.year}</li>
+                            </ul>
+                            </div>
                             <div className={styles.infoBody}>
-                                <h2 className={ styles.h2 }>Details</h2>
+                                <h2 className={ styles.h2 }>More Details</h2>
 
-                                <ul className={ styles.detailsList }>
-
+                                <ul className={ styles.moreDetailsList }>
                                     { properties.details ? (properties.details.map(e => {
                                         return <li className={ styles.detLi }>{ e }</li>
                                     })) : null }

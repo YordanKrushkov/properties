@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './index.module.css'
 
-const SearchOpions = (id,text,placeholder,f,) => {
+const SearchOpions = (id,text) => {
 
 
-    return <option id={id} value={text} placeholder={placeholder} required>{text}  </option>
+    return <option id={id} value={text}  required>{text}  </option>
 
 }
 

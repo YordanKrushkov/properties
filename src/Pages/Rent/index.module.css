@@ -1,9 +1,33 @@
-
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .wrapper{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 90vw;
     margin: 80px;
     flex-wrap: wrap;
     justify-content: baseline;
+}
+
+.nav{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    align-self: center;
+
+}
+
+.input{
+    width: 180px;
+    height: 30px;
+    border: none;
+    font-size: 18px;
+    padding: 2px;
+    border: 1px solid lightblue
 }

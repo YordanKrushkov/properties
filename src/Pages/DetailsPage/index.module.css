@@ -84,4 +84,12 @@
     border: none;
     color: white;
     background-color: lightblue;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: none;
+}
+.button:hover{
+    cursor: pointer;
+    font-size: 30px;
 }

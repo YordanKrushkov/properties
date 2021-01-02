@@ -10,6 +10,7 @@ const Login = () => {
         email: '',
         password: '',
     })
+
     const context = useContext(UserContext);
     const history = useHistory();
     const chnageHendler = (e) => {
@@ -22,25 +23,26 @@ const Login = () => {
     const submitHandler = (e) => {
         e.preventDefault();
         const { email, password } = user;
+
         fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
         })
-        .then(res => res.json())
-        .then((data) => {
-            if (data.email) {
-                context.logIn(data.email);
-                localStorage.setItem("user", data.email);
-            } else { }
-            document.cookie = `x-auth-token=${data.idToken}`
-            history.push('/');
-        }).catch((e) => {
-            console.log(e);
-            history.push('/login')
-        })
-    }
+            .then(res => res.json())
+            .then((data) => {
+                if (data.email) {
+                    context.logIn(data.email);
+                    localStorage.setItem("user", data.email);
 
+                }
+                document.cookie = `x-auth-token=${data.idToken}`
+                history.push('/');
+            }).catch((e) => {
+                console.log(e);
+                history.push('/login')
+            })
+    }
     return (
         <div className={ styles.container }>
             <h1 className={ styles.name }>Sign in</h1>
