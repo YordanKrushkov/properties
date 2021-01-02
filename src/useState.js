@@ -4,15 +4,18 @@ import UserContext from './Context'
 class UseState extends Component {
 
     state = {
-        loggedIn: null,
-        email: null,
+        loggedIn: false,
+        email: '',
+        
     }
 
     logIn = (email) => {
         this.setState({
             loggedIn: true,
-            email
+            email:email,
+           
         })
+        console.log(this.state);
     }
 
     logOut = () => {
@@ -24,6 +27,7 @@ class UseState extends Component {
         })
     }
     componentDidMount() {
+
         if (localStorage.getItem('user')) {
             this.setState({
                 loggedIn: true,
@@ -39,7 +43,8 @@ class UseState extends Component {
     render() {
         const {
             loggedIn,
-            email } = this.state
+            email 
+            } = this.state
         if (loggedIn === null) {
             <div>Loading...</div>
         }

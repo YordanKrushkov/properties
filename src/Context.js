@@ -4,7 +4,6 @@ const UserContext=React.createContext({
     loggedIn: false,
     email: null,
     name: null,
-    number:null,
     logIn:()=>{},
     logOut:()=>{},
 })

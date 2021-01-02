@@ -1,0 +1,55 @@
+.container{
+    width: 40vw;
+    height: 90vh;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+}
+.inputContainer{
+ display: flex;
+ flex-direction: column;
+ width: 30%;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.inputLabel{
+    font-size: 24px;
+    font-weight: bold;
+ margin: 5px 0 20px 0;
+
+}
+.input{
+ width: 100%;
+ height: 40px;
+ font-size: 24px;
+ text-align: center;
+ border-radius: 5px;
+}
+
+.img{
+    width: 10%;
+}
+.img:hover{
+    cursor: pointer;
+}
+.title{
+    color: black;
+}
+.button{
+    width: 30%;
+    height: 40px;
+    background-color: lightblue;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.button:hover{
+    cursor: pointer;
+}

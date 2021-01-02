@@ -8,33 +8,37 @@ const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPasswo
 const Login = () => {
     const [user, getUser] = useState({
         email: '',
-        password: ''
+        password: '',
     })
     const context = useContext(UserContext);
     const history = useHistory();
     const chnageHendler = (e) => {
         getUser({
+            ...user,
             [e.target.id]: e.target.value
         })
+
     }
     const submitHandler = (e) => {
         e.preventDefault();
         const { email, password } = user;
-
         fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
-        }).then(res => res.json())
-            .then(data => {
-                context.logIn(data.username, data.email)
-                localStorage.setItem("user", data.email)
-                document.cookie = `x-auth-token=${data.idToken}`
-                history.push('/')
-            })
-            .catch((e) => {
-                console.log(e);
-            })
+        })
+        .then(res => res.json())
+        .then((data) => {
+            if (data.email) {
+                context.logIn(data.email);
+                localStorage.setItem("user", data.email);
+            } else { }
+            document.cookie = `x-auth-token=${data.idToken}`
+            history.push('/');
+        }).catch((e) => {
+            console.log(e);
+            history.push('/login')
+        })
     }
 
     return (

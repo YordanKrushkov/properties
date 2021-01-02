@@ -41,7 +41,7 @@ const CardElement = (propertie, key) => {
                     </aside>
                 </main>
                 <footer>
-                    <h5>Yordan Krushkov</h5>
+                    <h5>{propertie.email}</h5>
                     <button>Contact</button>
                 </footer>
             </div>

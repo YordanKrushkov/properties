@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { useState, useContext } from 'react'
+import { useHistory} from 'react-router-dom'
 import styles from './index.module.css'
 import AllCities from '../../components/searchInputs/cities'
 import elements from '../../components/formElements/inputs'
 import inputs from '../../components/searchInputs/type'
+import UserContext from '../../Context'
 const PostForm = () => {
-
+    const context=useContext(UserContext)
     const [initialState, getState]=useState([])
-    // const initialState = []
     const [properties, getData] = useState({
         img: '',
         type: '',
@@ -25,6 +25,9 @@ const PostForm = () => {
         sellOrRent: 'RENT',
         details: initialState,
         description: '',
+        email:'',
+        name: '',
+        phone:'',
     });
     const [style, changeStyle] = useState(true);
     const history=useHistory()
@@ -33,8 +36,9 @@ const PostForm = () => {
 
         getData({
             ...properties,
-            [e.target.id]: e.target.value
-        })
+            [e.target.id]: e.target.value,
+            email:context.email
+        });
     };
     const detailHendler = (e) => {
 
@@ -53,7 +57,7 @@ const PostForm = () => {
         e.preventDefault();
         getData({
             ...properties,
-            details: initialState
+            details: initialState,
         })
 
         let promise = await fetch('https://properties-3e020-default-rtdb.firebaseio.com/properties.json', {
