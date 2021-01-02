@@ -4,7 +4,7 @@ import styles from './index.module.css'
 const SearchOpions = (id,text) => {
 
 
-    return <option id={id} value={text}  required>{text}  </option>
+    return <option className={styles.inputsEL} id={id} value={text}  required>{text}  </option>
 
 }
 

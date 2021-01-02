@@ -88,11 +88,11 @@ const PostForm = () => {
         widget.open()
     };
     const clickHendler = (e) => {
-        if (e.target.textContent === 'SELL') {
+        if (e.target.textContent === 'SALE') {
             changeStyle(false)
             getData({
                 ...properties,
-                sellOrRent: 'SELL'
+                sellOrRent: 'SALE'
             })
         } else {
             changeStyle(true);
@@ -109,7 +109,7 @@ const PostForm = () => {
             <header className={ styles.header }>
                 <ul className={ styles.headerContainer }>
                     <li onClick={ clickHendler } value='RENT' className={ style ? styles.new : styles.sellOrRent }>RENT</li>
-                    <li onClick={ clickHendler } value='SELL' className={ style ? styles.sellOrRent : styles.new }>SELL</li>
+                    <li onClick={ clickHendler } value='SALE' className={ style ? styles.sellOrRent : styles.new }>SALE</li>
                 </ul>
             </header>
             <h2 className={ styles.title }>List your property</h2>
