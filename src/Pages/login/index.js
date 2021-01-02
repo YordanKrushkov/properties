@@ -46,18 +46,18 @@ const Login = () => {
     return (
         <div className={ styles.container }>
             <h1 className={ styles.name }>Sign in</h1>
-            <p>Sign in to save your favourite properties, searches, house prices and more.</p>
+            <p  className={styles.p}>Sign in to save your favourite properties, searches, house prices and more.</p>
             <form action="" className={ styles.formBody } onSubmit={ submitHandler }>
-                <label htmlFor="email">Email</label>
-                <input type="email" name="" id="email" onChange={ chnageHendler } />
-                <label htmlFor="password">Password</label>
-                <input type="password" name="" id="password" onChange={ chnageHendler } />
-                <button>Login</button>
+                <label htmlFor="email"  className={styles.label}>Email</label>
+                <input type="email" name="" id="email"  className={styles.input} onChange={ chnageHendler } />
+                <label htmlFor="password"  className={styles.label}>Password</label>
+                <input type="password" name="" id="password"   className={styles.input} onChange={ chnageHendler } />
+                <button className={styles.button}>Login</button>
             </form>
             <a href="#" className={ styles.link }>Forgot your password?</a>
             <div className={ styles.register }>
-                <div className={ styles.joinUs }> <p>You don't have an accout yet? </p>
-                    <Link to="/register">Join us now</Link>
+                <div className={ styles.joinUs }> <p  className={styles.p}>You don't have an accout yet? </p>
+                    <Link  className={styles.joninUs} to="/register" className={ styles.a }>Join us now</Link>
                 </div>
             </div>
         </div>

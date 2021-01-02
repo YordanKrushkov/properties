@@ -3,6 +3,7 @@ body{
   padding: 0;
   background-color: lightgrey;
   max-height: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 html {
   height: 100%;

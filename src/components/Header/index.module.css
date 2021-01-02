@@ -1,8 +1,8 @@
 .container{
     margin:0;
     height: 80px;
-    background-color: rgba(47, 191, 236, 0.59);
-    opacity: 59%;
+    background-color: #018FF3;
+    opacity: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -16,6 +16,8 @@
     margin-right: 36px;
     text-transform: uppercase;
     font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+
 }
 .li:hover{
     font-weight: bold;
@@ -27,17 +29,20 @@ a{
     text-decoration: none;
     color: white;
     font-size:20px;
+    
 }
 
 .login{
-    font-size: 22px;
     font-weight: bold;
 }
 
-h1{ 
+.h1{ 
     font-weight: bold;
     color: white;
-    margin: 0 0 0 28px;
+    font-size: 52px;
+    margin: 10px 0 0 55px;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .loginField{

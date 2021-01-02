@@ -22,27 +22,27 @@ const CardElement = (propertie, key) => {
     return (
         <div className={ styles.parent } key={ key }onClick={handleClick}>
             <div className={ styles.card }  >
-                <main>
+                <main className={ styles.main}>
                     <header className={ styles.header } >
                         <div className={ styles.imgWrapper }>
                             <img className={ styles.img } src={ propertie.img } alt="propPicture" />
 
                         </div>
                     </header>
-                    <aside>
-                        <h1>{ `$ ${propertie.price} p.m`}</h1>
+                    <aside className={ styles.aside }>
+                        <h1 className={ styles.price }>{ `$ ${propertie.price} p.m`}</h1>
                         <div className={ styles.headerPic } >
-                            <img src={ pic } alt="bedroom" />
+                            <img  className={ styles.imgAsside }src={ pic } alt="bedroom" />
                             <div className={ styles.char }> { char } </div>
                         </div>
-                        <h5>{ propertie.bedrooms + ' ' + (propertie.type).toLowerCase() }</h5>
-                        <h6>{ propertie.street + ' ' + propertie.city }</h6>
+                        <h5 className={ styles.bedrooms }>{ propertie.bedrooms + ' ' + (propertie.type).toLowerCase() }</h5>
+                        <h6 className={ styles.address }>{ propertie.street + ' ' + propertie.city }</h6>
 
                     </aside>
                 </main>
-                <footer>
-                    <h5>{propertie.email}</h5>
-                    <button>Contact</button>
+                <footer className={ styles.footer }>
+                    <h5 className={ styles.email }>{propertie.email}</h5>
+                    <button className={ styles.button }>Contact</button>
                 </footer>
             </div>
         </div>

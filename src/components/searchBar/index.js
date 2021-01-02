@@ -17,7 +17,7 @@ const Search = () => {
     }, [])
     const clickHendler = (e) => {
         changeOption(e.target.textContent)
-        if (e.target.textContent === 'SELL') {
+        if (e.target.textContent === 'SALE') {
             changeStyle(false)
         } else {
             changeStyle(true)
@@ -48,7 +48,7 @@ const Search = () => {
                 <header className={ styles.header }>
                     <ul className={ styles.headerContainer }>
                         <li onClick={ clickHendler } value='RENT' className={ style ? styles.new : styles.sellOrRent }>RENT</li>
-                        <li onClick={ clickHendler } value='SELL' className={ style ? styles.sellOrRent : styles.new }>SELL</li>
+                        <li onClick={ clickHendler } value='SELL' className={ style ? styles.sellOrRent : styles.new }>SALE</li>
                     </ul>
                 </header>
                 <main className={ styles.main }>

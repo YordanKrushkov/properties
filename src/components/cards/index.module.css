@@ -1,7 +1,6 @@
 .card {
     width: 50vw;
     max-height: 400px;
-    height: max-content;
     background-color: white;
     border-radius: 10px;
     display: grid;
@@ -21,7 +20,7 @@
 
 }
 
-.card main {
+.main {
     width: 100%;
     display: flex;
     align-self: start;
@@ -29,39 +28,39 @@
     align-items: flex-start;
 }
 
-.card aside {
+.aside {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     margin: 20px 0 0 30px;
 }
-.card aside h1 {
+.price {
     color: #000;
     margin: 0;
 }
-.card aside h5 {
+.bedrooms {
     margin: 10px 0;
     font-size: 18px;
 }
-.card aside h6 {
+.address {
     font-size: 18px;
     margin: 10px 0;
     font-weight: lighter;
 }
-.card aside img {
+.imgAsside {
     margin-top: 10px;
     width: 20px;
 }
-.card footer {
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 20px 0 20px;
-    border-top: 2px solid rgba(122, 206, 233, 1);
+    border-top: 2px solid #018FF3;
 }
 
-.card footer button {
-    background-color: rgba(122, 206, 233, 1);
+.button {
+    background-color: #018FF3;
     border: none;
     border-radius: 20px;
     height: 40px;

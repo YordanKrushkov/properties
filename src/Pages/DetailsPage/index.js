@@ -88,9 +88,9 @@ const SingleCard = () => {
             </div>
             <aside className={ styles.lender }>
                 <header className={ styles.asideHeader }>
-                    <h2>{ `${properties.bedrooms} ${properties.type}` }</h2>
-                    <h5>{ `${properties.street} ${properties.city}` }</h5>
-                    <h2> $ { properties.price } p.m</h2>
+                    <h2 className={styles.title}>{ `${properties.bedrooms} ${properties.type}` }</h2>
+                    <h5 className={styles.address}>{ `${properties.street} ${properties.city}` }</h5>
+                    <h2 className={styles.price}> £ { properties.price } p.m</h2>
                 </header>
                 <div className={ styles.propertieCardInfo }>
                     <button className={ styles.button }>Contact</button>

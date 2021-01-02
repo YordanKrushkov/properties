@@ -42,7 +42,7 @@ const Sell = () => {
             </div>
         </div>
         <div className={ styles.wrapper } >
-            {getProperties.renderProperties(properties, 'SELL', !filter.city ?'София': filter.city, filter.type)}
+            {getProperties.renderProperties(properties, 'SALE', !filter.city ?'София': filter.city, filter.type)}
         </div>
         </div>
     )

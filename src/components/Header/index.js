@@ -12,8 +12,8 @@ const Header = () => {
     if (loggedIn) {
         nav = <ul className={styles.ul}>
             <li className={styles.li}><Link to="/post">Post</Link></li>
-            <li className={styles.li}><Link to="/rent">For Rent</Link></li>
-            <li className={styles.li}><Link to="/sell">For Sell</Link></li>
+            <li className={styles.li}><Link to="/rent">To Rent</Link></li>
+            <li className={styles.li}><Link to="/sell">For Sale</Link></li>
             <li className={styles.li}> <Link to="/signout" className={ styles.login } onClick={ onLogout }>SignOut</Link> </li>
         </ul>
     } else {
@@ -25,7 +25,7 @@ const Header = () => {
     }
     return (
         <div className={ styles.container }>
-            <Link to="/"> <h1>Welcome</h1></Link>
+            <Link to="/"> <h1 className={styles.h1}>RBS</h1></Link>
             {nav }
         </div>
     )

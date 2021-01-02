@@ -24,7 +24,7 @@
     align-items: center;
     list-style-type: none;
     padding: 0;
-    background-color: lightblue;
+    background-color: #018FF3;;
     margin: 0px;
 }
 .li {
@@ -70,6 +70,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top:20px;
+}
+.title{
+    text-transform:capitalize;
+    margin: 20px 0 0 0;
+}
+.address{
+    font-size: 20px;
+    font-weight: unset;
+    margin: 10px 0 0 0;
+}
+.price{
+    color:#018FF3;
+    font-size:36px;
 }
 .propertieCardInfo {
     display: flex;
@@ -77,19 +91,19 @@
     margin-top: 40px;
 }
 .button {
-    width: 350px;
+    width: 300px;
     height: 50px;
     margin: 20px auto;
     border-radius: 20px;
     border: none;
     color: white;
-    background-color: lightblue;
-    font-size: 28px;
+    background-color: #018FF3;
+    font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     outline: none;
 }
 .button:hover{
     cursor: pointer;
-    font-size: 30px;
+    font-size: 21px;
 }

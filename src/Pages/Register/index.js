@@ -46,26 +46,26 @@ const Register = () => {
                 <div className={ styles.formWrapper }>
                     <div className={ styles.inputWrapper }>
                         <div className={ styles.fieldWrapper }>
-                            <label htmlFor="email">Email</label>
-                            <input type="email" name="" id="email" onChange={ chnageHendler } required />
+                            <label htmlFor="email" className={ styles.label}>Email</label>
+                            <input type="email" name="" id="email" onChange={ chnageHendler } className={ styles.input} required />
                         </div>
                         <div className={ styles.fieldWrapper }>
-                            <label htmlFor="password">Password</label>
-                            <input type="password" name="" id="password" onChange={ chnageHendler } required />
+                            <label htmlFor="password" className={ styles.label}>Password</label>
+                            <input type="password" name="" id="password" onChange={ chnageHendler } className={ styles.input} required />
                         </div>
 
                         <div className={ styles.fieldWrapper }>
-                            <label htmlFor="repassword">Re-Password</label>
-                            <input type="password" name="" id="repassword" onChange={ chnageHendler } />
+                            <label htmlFor="repassword" className={ styles.label}>Re-Password</label>
+                            <input type="password" name="" id="repassword" onChange={ chnageHendler } className={ styles.input} />
                         </div>
                     </div>
                 </div>
 
-                <button>Register</button>
+                <button className={ styles.button}>Register</button>
             </form>
             <div className={ styles.register }>
-                <div className={ styles.joinUs }> <p>You have an accout already? </p>
-                    <Link to="/login">Login</Link> </div>
+                <div className={ styles.joinUs }> <p className={ styles.p}>You have an accout already? </p>
+                    <Link to="/login" className={ styles.login}>Login</Link> </div>
             </div>
         </div>
     )

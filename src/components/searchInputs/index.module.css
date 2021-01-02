@@ -8,7 +8,7 @@
     top: 150px;
     right: 200px;
     border-radius: 10px;
- border-color: rgba(122, 206, 233, 1);
+ border-color:#018FF3;
 
 }
 
@@ -23,18 +23,21 @@ h4{
     font-size: 24px;
     font-weight: bold;
     margin-top:20px;
+    
 }
 
 .imputs{
     display:flex;
     justify-content: space-evenly;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .type{
     display: flex;
     justify-content: center;
     margin-top:20px;
- border-color: rgba(122, 206, 233, 1);
+ border-color: #018FF3;
 
 }
 
@@ -49,14 +52,14 @@ h4{
 .location{
  height: 50px;
  width: 100px;
- border-color: rgba(122, 206, 233, 1);
+ border-color: #018FF3;
 
 }
 
 .typeflat{
     height: 50px;
     width: 200px;
-    border-color: rgba(122, 206, 233, 1);
+    border-color: #018FF3;
 }
 
 .card button{
@@ -64,7 +67,7 @@ h4{
     color: white;
     font-size: 24px;
     font-weight: bold;
-    background-color: rgba(122, 206, 233, 1);
+    background-color: #018FF3;
     border-radius: 50px;
     width: 200px;
     border:none;

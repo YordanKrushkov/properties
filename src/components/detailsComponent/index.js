@@ -45,7 +45,7 @@ return(
                                 </ul>
                             </div>
                             <div className={ styles.description }>
-                                <h2 className={ styles.h2 }>Description</h2>
+                                <h2 className={ styles.h2Description }>Description</h2>
                                 <div className={ styles.descriptionBody }>
                                     <p className={ styles.p }>{ properties.description }</p>
                                 </div>
