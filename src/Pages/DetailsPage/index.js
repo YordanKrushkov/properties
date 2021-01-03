@@ -11,11 +11,7 @@ const SingleCard = () => {
         getProperties.getSingleProp(takeProperties, id)
     }, [])
 
-    let bedrooms = properties.bedrooms;
-    let char = '';
-    if (bedrooms) {
-        char = bedrooms.charAt(0)
-    }
+    
     const style = styles.li
 
     const handleClick = (e) => {

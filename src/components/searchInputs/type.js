@@ -29,6 +29,18 @@ export default {
         )
 
     },
+    bathroomCount(className,f) {
+        return (
+            <select name="type" id="bathroom" className={ className }  onChange={f} required>
+                <option value="0">Select...</option>
+                { SearchOpions('bathroom', '1 bathroom', null) }
+                { SearchOpions('bathroom', '2 bathroom', null) }
+                { SearchOpions('bathroom', '3 bathroom',null ) }
+                { SearchOpions('bathroom', '4 bathroom',null ) }
+            </select>
+        )
+
+    },
     construction(className, f) {
         return (
             <select name="construction" id="construction" className={ className } required onChange={f}>

@@ -15,6 +15,7 @@ const PostForm = () => {
         city: '',
         street: '',
         bedrooms: '',
+        bathroom: '',
         construction: '',
         floorbuilding: '',
         floormax: '',
@@ -28,6 +29,7 @@ const PostForm = () => {
         email: '',
         name: '',
         phone: '',
+        floorplan: '',
     });
     const [style, changeStyle] = useState(true);
     const history = useHistory()
@@ -87,6 +89,25 @@ const PostForm = () => {
         })
         widget.open()
     };
+
+    const openWidgetFloorPlan = (e) => {
+        e.preventDefault()
+        const widget = window.cloudinary.createUploadWidget({
+            cloudName: "zltgrd",
+            uploadPreset: "properties"
+        }, (error, result) => {
+            console.log("Error", error);
+            console.log('Succes', result);
+            if (result.event === 'success') {
+                getData({
+                    ...properties,
+                    floorplan: result.info.url
+                })
+            }
+
+        })
+        widget.open()
+    };
     const clickHendler = (e) => {
         if (e.target.textContent === 'SALE') {
             changeStyle(false)
@@ -117,88 +138,89 @@ const PostForm = () => {
 
                 <div className={ styles.propertieOptions }>
                     <div className={ styles.optionSection }>
-                    <div className={ styles.typeContainer }>
-                            <h2>Where</h2>
+                        <div className={ styles.typeContainer }>
+                            <h2 className={ styles.h2Label }>Where</h2>
                             { AllCities(styles.optionMenu, onChangeHandler) }
                         </div>
                         <div className={ styles.typeContainer }>
-                            <h2>Property Type</h2>
+                            <h2 className={ styles.h2Label }>Property Type</h2>
                             { inputs.TypeSelect(styles.optionMenu, onChangeHandler) }
                         </div>
                         <div className={ styles.typeContainer }>
-                            <h2>Construction</h2>
+                            <h2 className={ styles.h2Label }>Construction</h2>
                             { inputs.construction(styles.optionMenu, onChangeHandler) }
                         </div>
 
                     </div>
 
                     <div className={ styles.optionSection }>
-                    <div className={ styles.typeContainer }>
-                            <h2>Bedrooms</h2>
+                        <div className={ styles.typeContainer }>
+                            <h2 className={ styles.h2Label }>Bedrooms</h2>
                             { inputs.bedroomCount(styles.optionMenu, onChangeHandler) }
                         </div>
                         <div className={ styles.typeContainer }>
-                            <h2>Bathrooms</h2>
-                            { inputs.bedroomCount(styles.optionMenu, onChangeHandler) }
+                            <h2 className={ styles.h2Label }>Bathrooms</h2>
+                            { inputs.bathroomCount(styles.optionMenu, onChangeHandler) }
                         </div>
-                        
+
                         <div className={ styles.typeContainer }>
-                            <h2>Furniture</h2>
+                            <h2 className={ styles.h2Label }>Furniture</h2>
                             { inputs.furniture(styles.optionMenu, onChangeHandler) }
                         </div>
                     </div>
                     <div className={ styles.optionSection }>
                         <div className={ styles.typeContainer }>
-                            <h2>Floor</h2>
+                            <h2 className={ styles.h2Label }>Floor</h2>
                             { inputs.floor(styles.optionMenu, 'building', onChangeHandler) }
                         </div>
                         <div className={ styles.typeContainer }>
-                            <h2>How many floors</h2>
+                            <h2 className={ styles.h2Label }>Total floors</h2>
                             { inputs.floor(styles.optionMenu, 'max', onChangeHandler) }
                         </div>
                         <div className={ styles.typeContainer }>
-                            <h2>Heating</h2>
+                            <h2 className={ styles.h2Label }>Heating</h2>
                             { inputs.heating(styles.optionMenu, onChangeHandler) }
                         </div>
                     </div>
 
                 </div>
                 <div className={ styles.details }>
-                    <div className={ styles.typeContainer }>
-                        <div className={ styles.street }>
-                            <label className={ styles.streetLabel } htmlFor="street">Street</label>
-                            <input className={ styles.streetInput } onChange={ onChangeHandler } placeholder="Street" type="text" name='street' id="street" />
-                        </div>
+                    <div className={ styles.street }>
+                        <label className={ styles.streetLabel } htmlFor="street">Street</label>
+                        <input className={ styles.streetInput } onChange={ onChangeHandler } placeholder="e.g. Oxford Str." type="text" name='street' id="street" />
                     </div>
-                    { elements.InputElements('price', 'text', '$', 'Price', onChangeHandler, 'req') }
-                    { elements.InputElements('size', 'text', 'sq m', 'Area', onChangeHandler) }
+                    { elements.InputElements('price', 'text', 'e.g. 1500', 'Price', onChangeHandler, 'req') }
+                    { elements.InputElements('size', 'text', 'e.g. 74 sq m', 'Area', onChangeHandler) }
                 </div>
 
                 <div className={ styles.freeDetailsParent }>
                     <div>
-                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'balcony', 'Balcony', detailHendler) }
-                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'garden', 'Garden', detailHendler) }
-                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'swimmingpool', 'Swimmin gpool', detailHendler) }
-                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'transport', 'Easy transport', detailHendler) }
-                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'lift', 'Lift', detailHendler) }
+                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'Balcony', 'Balcony', detailHendler) }
+                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'Garden', 'Garden', detailHendler) }
+                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'Swimming pool', 'Swimming pool', detailHendler) }
+                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'Easy transport', 'Easy transport', detailHendler) }
+                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'Lift', 'Lift', detailHendler) }
                     </div>
                     <div>
-                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'pets', 'Wellcome Pets', detailHendler) }
-                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'smocking', 'Smoking', detailHendler) }
-                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'garage', 'Garage', detailHendler) }
-                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'parking', 'Free Parking', detailHendler) }
-                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'security', 'Video Security', detailHendler) }
+                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'Wellcome Pets', 'Wellcome Pets', detailHendler) }
+                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'Smoking', 'Smoking', detailHendler) }
+                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'Garage', 'Garage', detailHendler) }
+                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'Free Parking', 'Free Parking', detailHendler) }
+                        { elements.ButtonsField(styles.type, 'checkbox', 'details', 'Video Security', 'Video Security', detailHendler) }
                     </div>
+                </div>
+                <div className={ styles.buttonsWrapper }>
+                    <button className={ styles.button } onClick={ openWidget } required>Upload Image</button>
+                    <button className={ styles.button } onClick={ openWidgetFloorPlan }>Upload Floor Plan</button>
+
                 </div>
 
                 <div className={ styles.description }>
                     <textarea id="description" placeholder='Please, write some description here...' className={ styles.textArea } onChange={ onChangeHandler } />
                 </div>
 
-                <div className={ styles.buttonsWrapper }>
-                    <button className={ styles.button } onClick={ openWidget }>Upload</button>
-                    <button className={ styles.button }>SUMBIT</button>
-                </div>
+
+                <button className={ styles.button }>SUMBIT</button>
             </form>
         </div>
     )

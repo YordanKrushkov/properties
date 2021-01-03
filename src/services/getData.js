@@ -10,11 +10,11 @@ export default {
         if (properties) {
             return Object.keys(properties).map((propertie) => {
                 let prop=properties[propertie]
-if (prop.sellOrRent === filter&& prop.city===newFilter 
-|| prop.sellOrRent === filter&& prop.type===type && prop.city===newFilter
-|| prop.sellOrRent === filter && prop.bedrooms===beds && prop.city===newFilter
-|| prop.sellOrRent === filter && prop.bedrooms===beds && prop.city===type) {
-                    
+if ( (prop.sellOrRent === filter && prop.bedrooms===beds && prop.city===type)  
+|| (prop.sellOrRent === filter&& prop.type===type && prop.city===newFilter)
+|| (prop.sellOrRent === filter && prop.bedrooms===beds && prop.city===newFilter)
+|| (prop.sellOrRent === filter&& prop.city===newFilter)) {
+      
                     let item = properties[propertie]
                     let key = propertie;
                     return CardElement(item, key)

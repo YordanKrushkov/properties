@@ -3,7 +3,7 @@ import styles from './index.module.css';
 import getProperties from '../../services/getData'
 import theType from '../../components/searchInputs/type'
 import AllCities from '../../components/searchInputs/cities'
-
+import Filter from '../../components/filterBar/filter'
 
 
 const Sell = () => {
@@ -24,27 +24,27 @@ const Sell = () => {
             [e.target.id]:e.target.value
         })
     }
+    const showProp = (e) => {
+        document.getElementById('filterBar').style.display = 'flex';
+    }
 
     return (
-        <div className={styles.container}>
-        <div className={styles.nav}>
-        <div className={styles.searchButton}>
-                <label htmlFor="city" />
-                {AllCities(styles.input, ChangeHandler)}
+        <div className={ styles.containerWrapper }>
+            {Filter(ChangeHandler)}
+            <div className={ styles.container } onMouseOver={ showProp }>
+            
+
+                <div className={ styles.wrapper } >
+                    { getProperties.renderProperties(properties, 'SALE', !filter.city ? 'София' : filter.city, filter.type) }
+                </div>
+                <aside className={ styles.aside }>
+                <div className={ styles.assideWrapper }></div>
+            </aside>
             </div>
-            <div className={styles.searchButton}>
-                <label htmlFor="city" />
-                {theType.TypeSelect(styles.input, ChangeHandler)}
-            </div>
-            <div className={styles.searchButton}>
-                <label htmlFor="city" />
-                {theType.bedroomCount(styles.input, ChangeHandler)}
-            </div>
+         
+
         </div>
-        <div className={ styles.wrapper } >
-            {getProperties.renderProperties(properties, 'SALE', !filter.city ?'София': filter.city, filter.type)}
-        </div>
-        </div>
+
     )
 }
 

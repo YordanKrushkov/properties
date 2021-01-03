@@ -5,11 +5,7 @@ import bath from '../../images/bath.svg'
 
 const DetailsContainer = (properties) => {
 
-    let bedrooms = properties.bedrooms;
-    let char = '';
-    if (bedrooms) {
-        char = bedrooms.charAt(0)
-    }
+
 
     return (
         <div className={ styles.infoContainers }>
@@ -21,7 +17,7 @@ const DetailsContainer = (properties) => {
                     </div>
                     <div className={ styles.icons }>
                         <img className={ styles.iconsPic } src={ bath } alt="bed" />
-                        <span className={ styles.span }>1 bathroom</span>
+                        <span className={ styles.span }>{properties.bathrooms}</span>
                     </div>
                 </div>
                 <div className={ styles.infoBody }>
@@ -57,8 +53,10 @@ const DetailsContainer = (properties) => {
             </div>
             </div>
             <div id='floorplanField' className={ styles.floorplan }>
+            {properties.floorplan ? <img src={properties.floorplan}/>: null}
             </div>
             <div id='mapField' className={ styles.map }>
+            
             </div>
           
         </div>

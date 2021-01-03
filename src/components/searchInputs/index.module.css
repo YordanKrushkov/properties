@@ -20,7 +20,7 @@ header{
 }
 
 h4{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     margin-top:20px;
     
@@ -47,7 +47,7 @@ h4{
     display: flex;
     justify-content: space-evenly;
     margin:20px auto;
-    font-size: 24px;
+    font-size: 20px;
     
     
 }
@@ -67,7 +67,7 @@ h4{
 .card button{
     justify-self: center;
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     background-color: #018FF3;
     border-radius: 50px;
