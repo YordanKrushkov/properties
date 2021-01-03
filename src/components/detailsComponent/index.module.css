@@ -29,7 +29,7 @@
 }
 
 .detailsList {
-    height: 150px;
+    height: 100px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -37,6 +37,9 @@
     align-items: flex-start;
     flex-wrap: wrap;
     margin-left: 0 auto;
+}
+.moreInfoBody{
+    margin-top:20px;
 }
 .moreDetailsList {
     height: 150px;
@@ -46,7 +49,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
     /* margin-left: 40px; */
-    margin: 0 auto;
+    margin: 10px auto;
 }
 .infoBody{
     width: 90%;
@@ -58,9 +61,6 @@
 }
 
 .map {
-    display: none;
-}
-.moreInfo {
     display: none;
 }
 

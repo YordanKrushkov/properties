@@ -55,17 +55,7 @@ const SingleCard = () => {
             document.getElementById('floorplanField').style.display = 'none'
 
         }
-        if (e.target === info) {
-            info.classList.add(styles.new)
-            info.classList.remove(styles.li)
-            document.getElementById('infoField').style.display = 'block'
-
-        } else {
-            info.classList.add(styles.li)
-            info.classList.remove(styles.new)
-            document.getElementById('infoField').style.display = 'none'
-
-        }
+      
     }
     
 
@@ -77,10 +67,9 @@ const SingleCard = () => {
                 <div className={ styles.info }>
                     <header className={ styles.header }>
                         <ul className={ styles.ul } onClick={ handleClick }>
-                            <li id='details' className={ style } >Property Details</li>
+                            <li id='details' className={ styles.new } >Property Details</li>
                             <li id='floorplan' className={ style } >Floorplan</li>
                             <li id='map' className={ style } >Map</li>
-                            <li id='info' className={ style } >More info</li>
                         </ul>
                     </header>
                      {DetailsContainer(properties)}

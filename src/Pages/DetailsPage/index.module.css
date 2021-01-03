@@ -24,7 +24,7 @@
     align-items: center;
     list-style-type: none;
     padding: 0;
-    background-color: #018FF3;;
+    
     margin: 0px;
 }
 .li {
@@ -37,7 +37,7 @@
     align-items: center;
     justify-content: center;
     color: white;
-}
+    background-color: #018FF3;}
 .new {
     font-size: 24px;
     font-weight: bold;

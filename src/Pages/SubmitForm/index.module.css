@@ -33,10 +33,10 @@
     color: white;
     width: 100%;
     height: 100%;
+    border: none;
 }
 .sellOrRent:hover{
     cursor: pointer;
-    font-size: 38px;
     border:none;
     outline: none;
     }
@@ -79,7 +79,7 @@
 
 }
 .optionMenu{
-font-size: 24px;
+font-size: 20px;
 text-align: center;
 width: 150px;
 border-radius: 5px;
@@ -88,7 +88,7 @@ margin: 0;
 }
 
 .street{
-font-size: 24px;
+font-size: 20px;
 text-align: start;
 width: 150px;
 margin-top:20px
@@ -99,13 +99,14 @@ margin-top:20px
     
 }
 .streetInput{
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 5px;
     height: 25px;
     text-align: center;
     margin-top:25px;
     outline: none;
     border: 1px solid #018FF3;
+    padding: 0;
 }
 
 /* .formContainer form input{
@@ -139,7 +140,7 @@ max-width: 100%;
     width: 100%;
     height: 100%;
     padding: 10px;
-    font-size: 18px;
+    font-size: 20px;
     outline: none;
     resize: none;
     border-radius: 10px;
@@ -175,7 +176,7 @@ max-width: 100%;
 
 .button {
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: white;
     background-color:  #018FF3;

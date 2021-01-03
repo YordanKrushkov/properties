@@ -1,13 +1,13 @@
 import React, { useState, useContext } from 'react'
-import { useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import styles from './index.module.css'
 import AllCities from '../../components/searchInputs/cities'
 import elements from '../../components/formElements/inputs'
 import inputs from '../../components/searchInputs/type'
 import UserContext from '../../Context'
 const PostForm = () => {
-    const context=useContext(UserContext)
-    const [initialState, getState]=useState([])
+    const context = useContext(UserContext)
+    const [initialState, getState] = useState([])
     const [properties, getData] = useState({
         img: '',
         type: '',
@@ -25,19 +25,19 @@ const PostForm = () => {
         sellOrRent: 'RENT',
         details: initialState,
         description: '',
-        email:'',
+        email: '',
         name: '',
-        phone:'',
+        phone: '',
     });
     const [style, changeStyle] = useState(true);
-    const history=useHistory()
+    const history = useHistory()
 
     const onChangeHandler = (e) => {
 
         getData({
             ...properties,
             [e.target.id]: e.target.value,
-            email:context.email
+            email: context.email
         });
     };
     const detailHendler = (e) => {
@@ -51,7 +51,7 @@ const PostForm = () => {
             initialState.splice(index, 1)
         }
         console.log(initialState);
-        
+
     };
     const submitHandler = async (e) => {
         e.preventDefault();
@@ -117,31 +117,31 @@ const PostForm = () => {
 
                 <div className={ styles.propertieOptions }>
                     <div className={ styles.optionSection }>
+                    <div className={ styles.typeContainer }>
+                            <h2>Where</h2>
+                            { AllCities(styles.optionMenu, onChangeHandler) }
+                        </div>
                         <div className={ styles.typeContainer }>
                             <h2>Property Type</h2>
                             { inputs.TypeSelect(styles.optionMenu, onChangeHandler) }
                         </div>
                         <div className={ styles.typeContainer }>
-                            <h2>Where</h2>
-                            { AllCities(styles.optionMenu, onChangeHandler) }
+                            <h2>Construction</h2>
+                            { inputs.construction(styles.optionMenu, onChangeHandler) }
                         </div>
-                        <div className={ styles.typeContainer }>
-                            <div className={ styles.street }>
-                                <label className={ styles.streetLabel } htmlFor="street">Street</label>
-                                <input className={ styles.streetInput } onChange={ onChangeHandler } placeholder="Street" type="text" name='street' id="street" />
-                            </div>
-                        </div>
+
                     </div>
 
                     <div className={ styles.optionSection }>
-                        <div className={ styles.typeContainer }>
+                    <div className={ styles.typeContainer }>
                             <h2>Bedrooms</h2>
                             { inputs.bedroomCount(styles.optionMenu, onChangeHandler) }
                         </div>
                         <div className={ styles.typeContainer }>
-                            <h2>Construction</h2>
-                            { inputs.construction(styles.optionMenu, onChangeHandler) }
+                            <h2>Bathrooms</h2>
+                            { inputs.bedroomCount(styles.optionMenu, onChangeHandler) }
                         </div>
+                        
                         <div className={ styles.typeContainer }>
                             <h2>Furniture</h2>
                             { inputs.furniture(styles.optionMenu, onChangeHandler) }
@@ -164,9 +164,14 @@ const PostForm = () => {
 
                 </div>
                 <div className={ styles.details }>
-                    { elements.InputElements('price', 'text', '$', '', onChangeHandler, 'req') }
-                    { elements.InputElements('size', 'text', 'sq.m', '', onChangeHandler) }
-                    { elements.InputElements('year', 'text', 'year', '', onChangeHandler) }
+                    <div className={ styles.typeContainer }>
+                        <div className={ styles.street }>
+                            <label className={ styles.streetLabel } htmlFor="street">Street</label>
+                            <input className={ styles.streetInput } onChange={ onChangeHandler } placeholder="Street" type="text" name='street' id="street" />
+                        </div>
+                    </div>
+                    { elements.InputElements('price', 'text', '$', 'Price', onChangeHandler, 'req') }
+                    { elements.InputElements('size', 'text', 'sq m', 'Area', onChangeHandler) }
                 </div>
 
                 <div className={ styles.freeDetailsParent }>
