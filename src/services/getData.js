@@ -7,7 +7,7 @@ export default {
         getProperties(properties)
     },
     renderProperties(properties, filter, newFilter,type,beds) {
-        if (properties) {
+        
             return Object.keys(properties).map((propertie) => {
                 let prop=properties[propertie]
 if ( (prop.sellOrRent === filter && prop.bedrooms===beds && prop.city===type)  
@@ -27,9 +27,7 @@ if ( (prop.sellOrRent === filter && prop.bedrooms===beds && prop.city===type)
                     return
                 }
             })
-        } else {
-            return <h1> No data</h1>
-        }
+       
     },
  
 
