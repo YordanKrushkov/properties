@@ -12,7 +12,7 @@ const Rent = () => {
 
 
     useEffect(() => {
-        getProperties.getData(takeProperties)
+        getProperties.getSome(takeProperties ,'rent')
     }, [])
 
 

@@ -17,7 +17,7 @@ const DetailsContainer = (properties) => {
                     </div>
                     <div className={ styles.icons }>
                         <img className={ styles.iconsPic } src={ bath } alt="bed" />
-                        <span className={ styles.span }>{properties.bathrooms}</span>
+                        <span className={ styles.span }>{properties.bathroom}</span>
                     </div>
                 </div>
                 <div className={ styles.infoBody }>
