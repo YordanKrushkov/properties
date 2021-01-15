@@ -26,7 +26,7 @@ const Login = () => {
         await authenticate(url, {
             email, password
         }, (user) => {
-
+            console.log(user);
             context.logIn(user);
             localStorage.setItem("user", email);
             history.push('/');
