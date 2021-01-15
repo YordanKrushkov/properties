@@ -12,7 +12,7 @@ const Rent = () => {
 
 
     useEffect(() => {
-        getProperties.getSome(takeProperties ,'rent')
+        getProperties.getSome(takeProperties ,'RENT')
     }, [])
 
 
@@ -33,7 +33,7 @@ const Rent = () => {
             
 
                 <div className={ styles.wrapper } >
-                    { getProperties.renderProperties(properties, 'RENT', !filter.city ? 'София' : filter.city, filter.type) }
+                    { getProperties.renderProperties(properties) }
                 </div>
                 <aside className={ styles.aside }>
                 <div className={ styles.assideWrapper }></div>

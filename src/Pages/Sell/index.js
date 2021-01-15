@@ -1,8 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import styles from './index.module.css';
 import getProperties from '../../services/getData'
-import theType from '../../components/searchInputs/type'
-import AllCities from '../../components/searchInputs/cities'
 import Filter from '../../components/filterBar/filter'
 
 
@@ -13,11 +11,10 @@ const Sell = () => {
         type:'',
         bedrooms:''
     })
-
-
     useEffect(() => {
-        getProperties.getData(takeProperties);
-    }, []);
+        getProperties.getSome(takeProperties ,'SELL')
+    }, [])
+
     const ChangeHandler=(e)=>{
         getFilter({
             ...filter,
@@ -35,7 +32,7 @@ const Sell = () => {
             
 
                 <div className={ styles.wrapper } >
-                    { getProperties.renderProperties(properties, 'SALE', !filter.city ? 'София' : filter.city, filter.type) }
+                    { getProperties.renderProperties(properties) }
                 </div>
                 <aside className={ styles.aside }>
                 <div className={ styles.assideWrapper }></div>

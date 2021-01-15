@@ -12,7 +12,6 @@ export default {
         getProperties(properties)
     },
     renderProperties(properties) {
-        
             return Object.keys(properties).map((propertie) => {
                     let item = properties[propertie]
                     let key = properties[propertie]._id
