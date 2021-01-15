@@ -23,7 +23,7 @@ const DetailsContainer = (properties) => {
                 <div className={ styles.infoBody }>
                     <h2 className={ styles.h2 }>Details</h2>
                     <ul className={ styles.detailsList }>
-                        <li className={ styles.detLi }>Size: { properties.size } sq.m</li>
+                        <li className={ styles.detLi }>Size: { properties.area } sq.m</li>
                         <li className={ styles.detLi }>Heating: { properties.heating }</li>
                         <li className={ styles.detLi }>{ properties.furnished }</li>
                         <li className={ styles.detLi }>Construction: { properties.construction }</li>

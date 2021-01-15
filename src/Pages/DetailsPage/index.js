@@ -6,7 +6,7 @@ import DetailsContainer from '../../components/detailsComponent'
 const SingleCard = () => {
     const [properties, takeProperties] = useState([]);
     const history = useHistory()
-    const id = history.location.pathname;
+    const id = history.location.pathname
     useEffect(() => {
         getProperties.getSingleProp(takeProperties, id)
     }, [])

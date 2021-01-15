@@ -87,7 +87,6 @@ const Search = () => {
                 </main>
                 <button>SEARCH</button>
             </div>
-            {get.renderProperties(properties) }
         </form>
     )
 }
