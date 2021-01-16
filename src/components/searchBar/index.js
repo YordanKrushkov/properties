@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import styles from './index.module.css'
 import AllCities from '../searchInputs/cities'
 import Price from '../searchInputs/price'
@@ -38,9 +38,8 @@ const Search = () => {
 
     const searchIt = (e) => {
         e.preventDefault()
-        history.push('/search')
+        
    
-
     }
     return (
         <form action="" onSubmit={ searchIt }>
@@ -85,7 +84,7 @@ const Search = () => {
                     </div>
 
                 </main>
-                <button>SEARCH</button>
+                <button><Link>SEARCH</Link></button>
             </div>
         </form>
     )

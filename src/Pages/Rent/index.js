@@ -9,12 +9,9 @@ const Rent = () => {
         type: '',
         bedrooms: ''
     })
-
-
     useEffect(() => {
-        getProperties.getSome(takeProperties ,'RENT')
+        getProperties.getSome(takeProperties ,'RENT',filter)
     }, [])
-
 
     const ChangeHandler = (e) => {
         getFilter({
@@ -22,14 +19,11 @@ const Rent = () => {
             [e.target.id]: e.target.value
         })
     }
-    const showProp = (e) => {
-        document.getElementById('filterBar').style.display = 'flex';
-    }
 
     return (
         <div className={ styles.containerWrapper }>
             {Filter(ChangeHandler)}
-            <div className={ styles.container } onMouseOver={ showProp }>
+            <div className={ styles.container }>
             
 
                 <div className={ styles.wrapper } >

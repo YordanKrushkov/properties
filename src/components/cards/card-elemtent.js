@@ -41,7 +41,7 @@ const CardElement = (propertie, key) => {
                     </aside>
                 </main>
                 <footer className={ styles.footer }>
-                    <h5 className={ styles.email }>{propertie.email}</h5>
+                    <h5 className={ styles.email }>{propertie.ownerId ?(`${propertie.ownerId.name} ${propertie.ownerId.surname} : ${propertie.ownerId.email}`):null}</h5>
                     <button className={ styles.button }>Contact</button>
                 </footer>
             </div>
