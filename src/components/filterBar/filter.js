@@ -3,12 +3,17 @@ import styles from './index.module.css'
 import theType from '../searchInputs/type'
 import Price from '../searchInputs/price'
 import AllCities from '../searchInputs/cities'
-
+import SortInput from '../searchInputs/sort'
 
 const Filter = (ChangeHandler, option) => {
 
     return (
         <div id='filterBar' className={ styles.nav } >
+  
+        <span className={ styles.navSpan }>Sort by:</span>
+        <div className={ styles.newOne }>
+        {SortInput(ChangeHandler)}
+        </div>
             <span className={ styles.navSpan }>Filter:</span>
             <div className={ styles.searchButton }>
                 <label htmlFor="city" ><span className={ styles.navSpan }>City: </span> </label>
@@ -19,7 +24,7 @@ const Filter = (ChangeHandler, option) => {
                 { theType.TypeSelect(styles.input, ChangeHandler) }
             </div>
             <div className={ styles.searchButton }>
-                <label htmlFor="city"><span className={ styles.navSpan }>Bedrooms: </span> </label>
+                <label htmlFor="bedrooms"><span className={ styles.navSpan }>Bedrooms: </span> </label>
                 { theType.bedroomCount(styles.input, ChangeHandler) }
             </div>
             <div className={ styles.searchButton }>

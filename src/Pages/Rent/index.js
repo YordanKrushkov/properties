@@ -9,13 +9,15 @@ const Rent = () => {
         type: '',
         bedrooms: '',
         minPrice:'',
-        maxPrice:''
+        maxPrice:'',
+        sortBy: ''
     })
     useEffect(() => {
         getProperties.getSome(takeProperties ,'RENT',filter)
     }, [])
     useEffect(() => {
         getProperties.getSome(takeProperties ,'RENT',filter)
+        console.log(filter);
     }, [filter])
 
     const ChangeHandler = (e) => {
@@ -24,7 +26,7 @@ const Rent = () => {
             [e.target.id]: e.target.value
         })
     }
-    console.log(filter);
+    
     return (
         <div className={ styles.containerWrapper }>
             {Filter(ChangeHandler, 'RENT')}

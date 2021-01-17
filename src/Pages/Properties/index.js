@@ -1,22 +1,49 @@
 import React, { useState, useEffect } from 'react'
 import getProperties from '../../services/getData'
-
+import styles from './index.module.css'
+import Filter from '../../components/filterBar/filter'
 
 
 
 const Properties = (searcher) => {
     const [properties, takeProperties] = useState([])
-    const filter = searcher.location.state
+    const [filter, getFilter] = useState({
+        city: '',
+        type: '',
+        bedrooms: '',
+        minPrice:'',
+        maxPrice:'',
+        sortBy:'',
+    })
+    const search = searcher.location.state
     useEffect(() => {
-        getProperties.Searchtem(takeProperties,filter)
+        getProperties.Searchtem(takeProperties,search)
     }, [])
+    useEffect(() => {
+        getProperties.getSome(takeProperties,search.sellOrRent,filter)
+    }, [filter])
+    const ChangeHandler = (e) => {
+        getFilter({
+            ...filter,
+            [e.target.id]: e.target.value
+        })
+        console.log(filter);
+    }
     return (
-        <div className='container'>
+        <div className={ styles.containerWrapper }>
+            {Filter(ChangeHandler, search.sellOrRent)}
+            <div className={ styles.container }>
+            
 
-            <h1>H1</h1>
-            <div className='cont' >
-                { getProperties.renderProperties(properties) }
+                <div className={ styles.wrapper } >
+                    { getProperties.renderProperties(properties) }
+                </div>
+                <aside className={ styles.aside }>
+                <div className={ styles.assideWrapper }></div>
+            </aside>
             </div>
+         
+
         </div>
     )
 

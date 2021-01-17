@@ -11,7 +11,8 @@ const Sell = () => {
         type: '',
         bedrooms: '',
         minPrice:'',
-        maxPrice:''
+        maxPrice:'',
+        sortBy:'',
     })
     useEffect(() => {
         getProperties.getSome(takeProperties ,'SALE', filter)
