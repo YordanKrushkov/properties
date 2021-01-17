@@ -81,3 +81,19 @@ h4{
 .inputsEL{
  border-color: #018FF3;
 }
+.sortSelector{
+    width: 150px;
+    height: 30px;
+    border: none;
+    font-size: 18px;
+    padding: 2px;
+    border: 1px solid lightblue
+}
+.neButton{
+    width: 150px;
+    height: 30px;
+    border: none;
+    font-size: 18px;
+    padding: 2px;
+    border: 1px solid lightblue
+}

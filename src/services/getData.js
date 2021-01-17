@@ -14,7 +14,7 @@ export default {
         getProperties(properties)
     },
     async getSome(getProperties, sellOrRent, filter) {
-        const promise = await fetch(`${url}${sellOrRent}?city=${filter.city}&type=${filter.type}&bedrooms=${filter.bedrooms}&minPrice=${filter.minPrice}&maxPrice=${filter.maxPrice}`);
+        const promise = await fetch(`${url}${sellOrRent}?city=${filter.city}&type=${filter.type}&bedrooms=${filter.bedrooms}&minPrice=${filter.minPrice}&maxPrice=${filter.maxPrice}&sortBy=${filter.sortBy}`);
         const properties = await promise.json();
         getProperties(properties)
     },
