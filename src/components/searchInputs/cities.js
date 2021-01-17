@@ -1,10 +1,10 @@
 import React from 'react'
 
 
-const AllCities = (classNeme, f) => {
+const AllCities = (classNeme, f, required) => {
 
     return (
-        <select name="town" id="city" className={ classNeme } onChange={ f }>
+        <select name="town" id="city" className={ classNeme } onChange={ f } required>
             <option id="city" value="0" selected>Show All</option>
             <option id="city" value="София">София</option>
             <option id="city" value="Пловдив">Пловдив</option>

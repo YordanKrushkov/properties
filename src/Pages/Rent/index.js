@@ -7,11 +7,16 @@ const Rent = () => {
     const [filter, getFilter] = useState({
         city: '',
         type: '',
-        bedrooms: ''
+        bedrooms: '',
+        minPrice:'',
+        maxPrice:''
     })
     useEffect(() => {
         getProperties.getSome(takeProperties ,'RENT',filter)
     }, [])
+    useEffect(() => {
+        getProperties.getSome(takeProperties ,'RENT',filter)
+    }, [filter])
 
     const ChangeHandler = (e) => {
         getFilter({
@@ -19,10 +24,10 @@ const Rent = () => {
             [e.target.id]: e.target.value
         })
     }
-
+    console.log(filter);
     return (
         <div className={ styles.containerWrapper }>
-            {Filter(ChangeHandler)}
+            {Filter(ChangeHandler, 'RENT')}
             <div className={ styles.container }>
             
 

@@ -1,22 +1,21 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import styles from './index.module.css'
 import AllCities from '../searchInputs/cities'
 import Price from '../searchInputs/price'
 import inputs from '../searchInputs/type'
-import get from '../../services/getData'
 
 const Search = () => {
-    const [way, changeOption] = useState('RENT');
     const [style, changeStyle] = useState(true);
-    const [properties, takeProperties] = useState([]);
-    const [search, changeSearch] = useState({})
+    const [search, changeSearch] = useState({ sellOrRent: 'RENT' })
     const history = useHistory()
-    useEffect(() => {
-        get.getData(takeProperties);
-    }, [])
+
     const clickHendler = (e) => {
-        changeOption(e.target.textContent)
+
+        changeSearch({
+            ...search,
+            sellOrRent: e.target.textContent
+        })
         if (e.target.textContent === 'SALE') {
             changeStyle(false)
         } else {
@@ -29,17 +28,16 @@ const Search = () => {
             ...search,
             [e.target.id]: e.target.value
         })
-
     }
-
-    useEffect(() => {
-
-    }, [changeHandler])
 
     const searchIt = (e) => {
         e.preventDefault()
-        
-   
+        history.push({
+            pathname: '/properties',
+            search: `?sellOrRent=${search.sellOrRent}&city=${search.city}&type=${search.type}&bedrooms=${search.bedrooms}&minPrice=${search.minPrice}&maxPrice=${search.maxPrice}`,
+            state: search
+        })
+
     }
     return (
         <form action="" onSubmit={ searchIt }>
@@ -53,20 +51,20 @@ const Search = () => {
                 <main className={ styles.main }>
                     <h4 className={ styles.searchCardTitle }> Search for Property </h4>
                     <div className={ styles.imputs } >
-                        <label htmlFor="town">Town</label>
-                        { AllCities(styles.options, changeHandler) }
+                        <label htmlFor="city">City</label>
+                        { AllCities(styles.options, changeHandler, true) }
                     </div>
 
-                    { way === "RENT" ? (<div className={ styles.imputs } >
+                    { search.sellOrRent === "RENT" ? (<div className={ styles.imputs } >
                         <label htmlFor="price">Min.Price</label>
                         {Price.RentingPrice("minPrice", styles.options, changeHandler) } </div>) :
                         (<div className={ styles.imputs } >
                             <label htmlFor="price">Min.Price</label>
                             {Price.SellingPrice("minPrice", styles.options, changeHandler) } </div>) }
 
-                    { way === "RENT" ? (<div className={ styles.imputs } >
+                    { search.sellOrRent === "RENT" ? (<div className={ styles.imputs } >
                         <label htmlFor="price">Max.Price</label>
-                        {Price.RentingPrice("minPrice", styles.options, changeHandler) } </div>) :
+                        {Price.RentingPrice("maxPrice", styles.options, changeHandler) } </div>) :
                         (<div className={ styles.imputs } >
                             <label htmlFor="price">Max.Price</label>
                             {Price.SellingPrice("maxPrice", styles.options, changeHandler) } </div>) }
@@ -74,7 +72,7 @@ const Search = () => {
                     <div className={ styles.typeContainer }>
                         <div className={ styles.type }>
                             <label htmlFor="type">Property Type</label>
-                            { inputs.TypeSelect(styles.typeflat, changeHandler) }
+                            { inputs.TypeSelect(styles.typeflat, changeHandler, 'false') }
                         </div>
 
                         <div className={ styles.type }>
@@ -84,7 +82,7 @@ const Search = () => {
                     </div>
 
                 </main>
-                <button><Link>SEARCH</Link></button>
+                <button>SEARCH</button>
             </div>
         </form>
     )

@@ -7,9 +7,11 @@ import Filter from '../../components/filterBar/filter'
 const Sell = () => {
     const [properties, takeProperties] = useState([]);
     const [filter, getFilter]=useState({
-        city:'',
-        type:'',
-        bedrooms:''
+        city: '',
+        type: '',
+        bedrooms: '',
+        minPrice:'',
+        maxPrice:''
     })
     useEffect(() => {
         getProperties.getSome(takeProperties ,'SALE', filter)
@@ -27,7 +29,7 @@ const Sell = () => {
 
     return (
         <div className={ styles.containerWrapper }>
-            {Filter(ChangeHandler)}
+            {Filter(ChangeHandler, 'SALE')}
             <div className={ styles.container }>
             
 
