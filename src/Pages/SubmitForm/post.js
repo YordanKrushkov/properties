@@ -5,6 +5,7 @@ import AllCities from '../../components/searchInputs/cities'
 import elements from '../../components/formElements/inputs'
 import inputs from '../../components/searchInputs/type'
 import UserContext from '../../Context'
+import getCookie from '../../services/cookies'
 const PostForm = () => {
     const context = useContext(UserContext)
     const [initialState, getState] = useState([])
@@ -21,21 +22,17 @@ const PostForm = () => {
         floormax: '',
         furnished: '',
         heating: '',
-        size: '',
-        year: '',
+        area: '',
         sellOrRent: 'RENT',
         details: initialState,
         description: '',
-        email: '',
-        name: '',
-        phone: '',
         floorplan: '',
+        ownerId:'',
     });
     const [style, changeStyle] = useState(true);
     const history = useHistory()
 
     const onChangeHandler = (e) => {
-
         getData({
             ...properties,
             [e.target.id]: e.target.value,
@@ -43,7 +40,6 @@ const PostForm = () => {
         });
     };
     const detailHendler = (e) => {
-
         if (e.target.checked) {
             initialState.push(e.target.name)
         }
@@ -61,14 +57,17 @@ const PostForm = () => {
             ...properties,
             details: initialState,
         })
-
-        let promise = await fetch('https://properties-3e020-default-rtdb.firebaseio.com/properties.json', {
+        console.log('before fetch:', properties);
+        let promise = await fetch('http://localhost:4000/properties/create', {
             method: 'POST',
-            body: JSON.stringify(properties)
+            body: JSON.stringify(properties),
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': getCookie('x-auth-token')
+            },
         })
-        let data = await promise.json();
+        console.log('promise',promise);
         history.push('/');
-        return data;
 
     };
     const openWidget = (e) => {
@@ -190,7 +189,7 @@ const PostForm = () => {
                         <input className={ styles.streetInput } onChange={ onChangeHandler } placeholder="e.g. Oxford Str." type="text" name='street' id="street" />
                     </div>
                     { elements.InputElements('price', 'text', 'e.g. 1500', 'Price', onChangeHandler, 'req') }
-                    { elements.InputElements('size', 'text', 'e.g. 74 sq m', 'Area', onChangeHandler) }
+                    { elements.InputElements('area', 'text', 'e.g. 74 sq m', 'Area', onChangeHandler) }
                 </div>
 
                 <div className={ styles.freeDetailsParent }>

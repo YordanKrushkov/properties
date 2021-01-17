@@ -6,12 +6,11 @@ import DetailsContainer from '../../components/detailsComponent'
 const SingleCard = () => {
     const [properties, takeProperties] = useState([]);
     const history = useHistory()
-    const id = history.location.pathname;
+    const id = history.location.pathname
     useEffect(() => {
         getProperties.getSingleProp(takeProperties, id)
     }, [])
 
-    
     const style = styles.li
 
     const handleClick = (e) => {
@@ -75,6 +74,7 @@ const SingleCard = () => {
                 <header className={ styles.asideHeader }>
                     <h2 className={styles.title}>{ `${properties.bedrooms} ${properties.type}` }</h2>
                     <h5 className={styles.address}>{ `${properties.street} ${properties.city}` }</h5>
+                    <h5 className={styles.address}>{ properties.ownerId ?(`${properties.ownerId.name} ${properties.ownerId.surname}`): null }</h5>
                     <h2 className={styles.price}> £ { properties.price } p.m</h2>
                 </header>
                 <div className={ styles.propertieCardInfo }>

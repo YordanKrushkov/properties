@@ -7,14 +7,16 @@ const Rent = () => {
     const [filter, getFilter] = useState({
         city: '',
         type: '',
-        bedrooms: ''
+        bedrooms: '',
+        minPrice:'',
+        maxPrice:''
     })
-
-
     useEffect(() => {
-        getProperties.getData(takeProperties)
+        getProperties.getSome(takeProperties ,'RENT',filter)
     }, [])
-
+    useEffect(() => {
+        getProperties.getSome(takeProperties ,'RENT',filter)
+    }, [filter])
 
     const ChangeHandler = (e) => {
         getFilter({
@@ -22,18 +24,15 @@ const Rent = () => {
             [e.target.id]: e.target.value
         })
     }
-    const showProp = (e) => {
-        document.getElementById('filterBar').style.display = 'flex';
-    }
-
+    console.log(filter);
     return (
         <div className={ styles.containerWrapper }>
-            {Filter(ChangeHandler)}
-            <div className={ styles.container } onMouseOver={ showProp }>
+            {Filter(ChangeHandler, 'RENT')}
+            <div className={ styles.container }>
             
 
                 <div className={ styles.wrapper } >
-                    { getProperties.renderProperties(properties, 'RENT', !filter.city ? 'София' : filter.city, filter.type) }
+                    { getProperties.renderProperties(properties) }
                 </div>
                 <aside className={ styles.aside }>
                 <div className={ styles.assideWrapper }></div>

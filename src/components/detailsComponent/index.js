@@ -4,8 +4,7 @@ import bed from '../../images/bed.svg'
 import bath from '../../images/bath.svg'
 
 const DetailsContainer = (properties) => {
-
-
+ let count=0;
 
     return (
         <div className={ styles.infoContainers }>
@@ -17,13 +16,13 @@ const DetailsContainer = (properties) => {
                     </div>
                     <div className={ styles.icons }>
                         <img className={ styles.iconsPic } src={ bath } alt="bed" />
-                        <span className={ styles.span }>{properties.bathrooms}</span>
+                        <span className={ styles.span }>{properties.bathroom}</span>
                     </div>
                 </div>
                 <div className={ styles.infoBody }>
                     <h2 className={ styles.h2 }>Details</h2>
                     <ul className={ styles.detailsList }>
-                        <li className={ styles.detLi }>Size: { properties.size } sq.m</li>
+                        <li className={ styles.detLi }>Size: { properties.area } sq.m</li>
                         <li className={ styles.detLi }>Heating: { properties.heating }</li>
                         <li className={ styles.detLi }>{ properties.furnished }</li>
                         <li className={ styles.detLi }>Construction: { properties.construction }</li>
@@ -39,7 +38,7 @@ const DetailsContainer = (properties) => {
                     </div>
                     <ul className={ styles.moreDetailsList }>
                         { properties.details ? (properties.details.map(e => {
-                            return <li className={ styles.detLi }>{ e }</li>
+                            return <li key={count++} className={ styles.detLi }>{ e }</li>
                         })) : null }
                     </ul>
                 </div>
