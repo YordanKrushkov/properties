@@ -1,7 +1,7 @@
 import React from 'react'
 import SearchOpions from './index'
 
-export default {
+const optionFields= {
 
     TypeSelect(className, f) {
 
@@ -85,3 +85,5 @@ export default {
         )
     },
 }
+
+export default optionFields;

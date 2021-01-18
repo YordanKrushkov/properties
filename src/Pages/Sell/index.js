@@ -14,10 +14,7 @@ const Sell = () => {
         maxPrice:'',
         sortBy:'',
     })
-    useEffect(() => {
-        getProperties.getSome(takeProperties ,'SALE', filter)
-    }, [])
-
+ 
     const ChangeHandler=(e)=>{
         getFilter({
             ...filter,

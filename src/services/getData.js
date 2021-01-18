@@ -1,6 +1,8 @@
 import CardElement from "../components/cards/card-elemtent";
+import getCookie from './cookies'
 const url = 'http://localhost:4000/properties/';
-export default {
+
+const getPropertiesService= {
     renderProperties(properties) {
         return Object.keys(properties).map((propertie) => {
             let item = properties[propertie]
@@ -9,30 +11,47 @@ export default {
         })
     },
     async getData(getProperties) {
-        const promise = await fetch(`${url}all`);
+        const promise = await fetch(`${url}all`, {
+            method:'GET',
+            headers: {
+            'Authorization': getCookie('x-auth-token')
+        }});
         const properties = await promise.json();
         getProperties(properties)
     },
     async getSome(getProperties, sellOrRent, filter) {
-        const promise = await fetch(`${url}${sellOrRent}?city=${filter.city}&type=${filter.type}&bedrooms=${filter.bedrooms}&minPrice=${filter.minPrice}&maxPrice=${filter.maxPrice}&sortBy=${filter.sortBy}`);
+        const promise = await fetch(`${url}${sellOrRent}?city=${filter.city}&type=${filter.type}&bedrooms=${filter.bedrooms}&minPrice=${filter.minPrice}&maxPrice=${filter.maxPrice}&sortBy=${filter.sortBy}`,
+        {
+            method:'GET',
+            headers: {
+            'Authorization': getCookie('x-auth-token')
+        }});
         const properties = await promise.json();
         getProperties(properties)
     },
 
     async Searchtem(getProperties,filter){
-        const promise = await fetch(`${url}/properties?sellOrRent=${filter.sellOrRent}&city=${filter.city}&type=${filter.type}&bedrooms=${filter.bedrooms}&minPrice=${filter.minPrice}&maxPrice=${filter.maxPrice}`);
-        console.log(promise);
-        console.log('filer:',filter);
-        const properties = await promise.json()
-        console.log(properties);
+        const promise = await fetch(`${url}/properties?sellOrRent=${filter.sellOrRent}&city=${filter.city}&type=${filter.type}&bedrooms=${filter.bedrooms}&minPrice=${filter.minPrice}&maxPrice=${filter.maxPrice}`,
+        {
+            method:'GET',
+            headers: {
+            'Authorization': getCookie('x-auth-token')
+        }});  
+        const properties = await promise.json();
         getProperties(properties)
 
     },
 
 
     async getSingleProp(getProperties, id) {
-        const promise = await fetch(`${url}${id}`);
+        const promise = await fetch(`${url}${id}`,  {
+            method:'GET',
+            headers: {
+            'Authorization': getCookie('x-auth-token')
+        }});
         const properties = await promise.json();
         getProperties(properties)
     }
 }
+
+export default getPropertiesService

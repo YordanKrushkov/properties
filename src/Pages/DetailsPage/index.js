@@ -6,8 +6,9 @@ import DetailsContainer from '../../components/detailsComponent'
 const SingleCard = () => {
     const [properties, takeProperties] = useState([]);
     const history = useHistory()
-    const id = history.location.pathname
+
     useEffect(() => {
+        const id = history.location.pathname
         getProperties.getSingleProp(takeProperties, id)
     }, [])
 
@@ -17,7 +18,6 @@ const SingleCard = () => {
         const details = document.getElementById('details');
         const floorplan = document.getElementById('floorplan');
         const map = document.getElementById('map');
-        const info = document.getElementById('info');
         if (e.target === details) {
             details.classList.add(styles.new)
             details.classList.remove(styles.li)
@@ -50,11 +50,9 @@ const SingleCard = () => {
             document.getElementById('floorplanField').style.display = 'none'
 
         }
-      
-    }
-    
 
-    console.log(properties.details);
+    }
+
     return (
         <div className={ styles.conteiner }>
             <div className={ styles.propertieInfo }>
@@ -67,15 +65,15 @@ const SingleCard = () => {
                             <li id='map' className={ style } >Map</li>
                         </ul>
                     </header>
-                     {DetailsContainer(properties)}
+                    { DetailsContainer(properties) }
                 </div>
             </div>
             <aside className={ styles.lender }>
                 <header className={ styles.asideHeader }>
-                    <h2 className={styles.title}>{ `${properties.bedrooms} ${properties.type}` }</h2>
-                    <h5 className={styles.address}>{ `${properties.street} ${properties.city}` }</h5>
-                    <h5 className={styles.address}>{ properties.ownerId ?(`${properties.ownerId.name} ${properties.ownerId.surname}`): null }</h5>
-                    <h2 className={styles.price}> £ { properties.price } p.m</h2>
+                    <h2 className={ styles.title }>{ `${properties.bedrooms} ${properties.type}` }</h2>
+                    <h5 className={ styles.address }>{ `${properties.street} ${properties.city}` }</h5>
+                    <h5 className={ styles.address }>{ properties.ownerId ? (`${properties.ownerId.name} ${properties.ownerId.surname}`) : null }</h5>
+                    <h2 className={ styles.price }> £ { properties.price } p.m</h2>
                 </header>
                 <div className={ styles.propertieCardInfo }>
                     <button className={ styles.button }>Contact</button>

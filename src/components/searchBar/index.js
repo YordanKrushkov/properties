@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import styles from './index.module.css'
 import AllCities from '../searchInputs/cities'
 import Price from '../searchInputs/price'

@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default {
+const priceList= {
 
 
     SellingPrice(minOrMax, classNeme, f) {
@@ -82,3 +82,4 @@ export default {
 
 }
 
+export default priceList
