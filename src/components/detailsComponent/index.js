@@ -11,11 +11,11 @@ const DetailsContainer = (properties) => {
             <div id='detailsField' className={ styles.details }>
                 <div className={ styles.iconsParents }>
                     <div className={ styles.icons }>
-                        <img className={ styles.iconsPic } src={ bed } alt="bed" />
+                        <img className={ styles.iconsPic } src={ bed } alt="bedrooms " />
                         <span className={ styles.span }>{ properties.bedrooms }</span>
                     </div>
                     <div className={ styles.icons }>
-                        <img className={ styles.iconsPic } src={ bath } alt="bed" />
+                        <img className={ styles.iconsPic } src={ bath } alt="bathrooms" />
                         <span className={ styles.span }>{properties.bathroom}</span>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const DetailsContainer = (properties) => {
             </div>
             </div>
             <div id='floorplanField' className={ styles.floorplan }>
-            {properties.floorplan ? <img src={properties.floorplan}/>: null}
+            {properties.floorplan ? <img src={properties.floorplan} alt='floorplan'/>: null}
             </div>
             <div id='mapField' className={ styles.map }>
             

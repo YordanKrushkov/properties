@@ -1,45 +1,43 @@
 import { Component } from 'react'
 import UserContext from './Context'
-
+import userVerify from '../src/services/userVerify'
 class UseState extends Component {
 
     state = {
-        loggedIn: false,
-        email: '',
+        loggedIn: null,
+        email: null,
         id: '',
     }
-
     logIn = (email) => {
         this.setState({
+            ...email,
             loggedIn: true,
-            email: email,
         })
-
     }
     logOut = () => {
         document.cookie = 'x-auth-token=';
         localStorage.removeItem('user')
         this.setState({
             loggedIn: false,
-            email: null
+            email: null,
         })
     }
     componentDidMount() {
-
-        if (localStorage.getItem('user')) {
-            this.setState({
-                loggedIn: true,
-                email: localStorage.getItem('user'),
+        userVerify('x-auth-token')
+            .then(res => {
+                if (res) {
+                    this.setState({
+                        loggedIn: true,
+                        email: localStorage.getItem('user'),
+                    })
+                } else {
+                    this.logOut()
+                }
             })
-        } else {
-            this.setState({
-                loggedIn: false,
-                email: null,
-            })
-        }
     };
 
     render() {
+        console.log('auth?', this.state);
         const {
             loggedIn,
             email

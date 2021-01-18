@@ -14,10 +14,7 @@ const Rent = () => {
     })
     useEffect(() => {
         getProperties.getSome(takeProperties ,'RENT',filter)
-    }, [])
-    useEffect(() => {
-        getProperties.getSome(takeProperties ,'RENT',filter)
-        console.log(filter);
+        
     }, [filter])
 
     const ChangeHandler = (e) => {

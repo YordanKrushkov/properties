@@ -18,9 +18,9 @@ const Body = () => {
                 
             </div>
             <img   className={ styles.img } src={ pic } alt="No pic" />
+            <Search />
             <div className={styles.cardContainer}>
             <Card />
-            <Search />
             </div>
         </div>
     )

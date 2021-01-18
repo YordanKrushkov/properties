@@ -11,38 +11,34 @@ const Properties = (searcher) => {
         city: '',
         type: '',
         bedrooms: '',
-        minPrice:'',
-        maxPrice:'',
-        sortBy:'',
+        minPrice: '',
+        maxPrice: '',
+        sortBy: '',
     })
     const search = searcher.location.state
-    useEffect(() => {
-        getProperties.Searchtem(takeProperties,search)
-    }, [])
-    useEffect(() => {
-        getProperties.getSome(takeProperties,search.sellOrRent,filter)
+    useEffect((search) => {
+        getProperties.getSome(takeProperties, search.sellOrRent, filter)
     }, [filter])
     const ChangeHandler = (e) => {
         getFilter({
             ...filter,
             [e.target.id]: e.target.value
         })
-        console.log(filter);
     }
     return (
         <div className={ styles.containerWrapper }>
-            {Filter(ChangeHandler, search.sellOrRent)}
+            {Filter(ChangeHandler, search.sellOrRent) }
             <div className={ styles.container }>
-            
+
 
                 <div className={ styles.wrapper } >
                     { getProperties.renderProperties(properties) }
                 </div>
                 <aside className={ styles.aside }>
-                <div className={ styles.assideWrapper }></div>
-            </aside>
+                    <div className={ styles.assideWrapper }></div>
+                </aside>
             </div>
-         
+
 
         </div>
     )

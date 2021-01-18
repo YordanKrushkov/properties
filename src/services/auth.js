@@ -1,3 +1,6 @@
+
+
+
 const authenticate = async (url, body, onSuccess, onFailure) => {
     try {
         const promise = await fetch(url, {
@@ -11,11 +14,10 @@ const authenticate = async (url, body, onSuccess, onFailure) => {
         document.cookie = `x-auth-token=${authToken}`
 
         const response = await promise.json()
-        console.log(response);
-        if (response.email && authToken) {
+        if (response.email && authToken && response._id) {
             onSuccess({
                 email: response.email,
-                id: response._id
+                id: response._id,
             })
         } else {
             onFailure()

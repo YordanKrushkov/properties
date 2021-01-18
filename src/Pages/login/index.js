@@ -26,7 +26,6 @@ const Login = () => {
         await authenticate(url, {
             email, password
         }, (user) => {
-            console.log(user);
             context.logIn(user);
             localStorage.setItem("user", email);
             history.push('/');
@@ -46,10 +45,10 @@ const Login = () => {
                 <input type="password" name="" id="password" className={ styles.input } onChange={ chnageHendler } />
                 <button className={ styles.button }>Login</button>
             </form>
-            <a href="#" className={ styles.link }>Forgot your password?</a>
+            <a href="/forgot" className={ styles.link }>Forgot your password?</a>
             <div className={ styles.register }>
                 <div className={ styles.joinUs }> <p className={ styles.p }>You don't have an accout yet? </p>
-                    <Link className={ styles.joninUs } to="/register" className={ styles.a }>Join us now</Link>
+                    <Link to="/register" className={ styles.a }>Join us now</Link>
                 </div>
             </div>
         </div>

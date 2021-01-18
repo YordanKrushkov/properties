@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext,useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import styles from './index.module.css'
 import AllCities from '../../components/searchInputs/cities'
@@ -8,7 +8,7 @@ import UserContext from '../../Context'
 import getCookie from '../../services/cookies'
 const PostForm = () => {
     const context = useContext(UserContext)
-    const [initialState, getState] = useState([])
+    const [initialState, getState] = useState([]);
     const [properties, getData] = useState({
         img: '',
         type: '',
@@ -31,6 +31,15 @@ const PostForm = () => {
     });
     const [style, changeStyle] = useState(true);
     const history = useHistory()
+
+    
+    useEffect(()=>{
+        const isLogged=getCookie('x-auth-token')
+         if(!isLogged){
+             context.logOut()
+             history.push('/')
+         }
+    })
 
     const onChangeHandler = (e) => {
         getData({
@@ -223,21 +232,6 @@ const PostForm = () => {
             </form>
         </div>
     )
-
-
-
-
 }
 
 export default PostForm;
-
-// {/* {ButtonsField(styles.type,'radio','type','flat', 'Flat','req')}
-//                 {ButtonsField(styles.type,'radio','type','house', 'House')}
-//                 {ButtonsField(styles.type,'radio','type','cottage', 'Cottage')}
-//                 {ButtonsField(styles.type,'radio','type','land', 'Land')} */}
-
-// {/* {ButtonsField(styles.type,'radio','bedroom','studio', 'Studio','req')}
-//                 {ButtonsField(styles.type,'radio','bedroom','one', '1 bedroom')}
-//                 {ButtonsField(styles.type,'radio','bedroom','two', '2 bedroom')}
-//                 {ButtonsField(styles.type,'radio','bedroom','three', '3 bedroom')}
-//                 {ButtonsField(styles.type,'radio','bedroom','four', '4 bedroom +')} */}
