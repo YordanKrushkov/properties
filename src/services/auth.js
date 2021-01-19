@@ -18,6 +18,8 @@ const authenticate = async (url, body, onSuccess, onFailure) => {
             onSuccess({
                 email: response.email,
                 id: response._id,
+                name: response.name,
+                surname: response.surname,
             })
         } else {
             onFailure()

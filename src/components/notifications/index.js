@@ -3,14 +3,13 @@ import styles from './index.module.css'
 
 
 
-const Notification=(message)=>{
-
+const notification= (messege)=>{
 
     return(
-        <div className={styles.container}>
-            <h2 className="message">{message}</h2>
+        <div className={styles.container} id='notification'>
+            <h2 className={styles.message}>{messege}</h2>
         </div>
     )
 }
 
-export default Notification
+export default notification

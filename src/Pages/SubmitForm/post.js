@@ -66,17 +66,20 @@ const PostForm = () => {
             ...properties,
             details: initialState,
         })
-        console.log('before fetch:', properties);
-        let promise = await fetch('http://localhost:4000/properties/create', {
-            method: 'POST',
-            body: JSON.stringify(properties),
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': getCookie('x-auth-token')
-            },
-        })
-        console.log('promise',promise);
-        history.push('/');
+        try{
+            let promise = await fetch('http://localhost:4000/properties/create', {
+                method: 'POST',
+                body: JSON.stringify(properties),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': getCookie('x-auth-token')
+                },
+            })
+            history.push('/','Submitted successfully!');
+        }catch{
+            console.log('error');
+        }
+      
 
     };
     const openWidget = (e) => {

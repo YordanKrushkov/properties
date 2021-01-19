@@ -16,7 +16,7 @@ const Properties = (searcher) => {
         sortBy: '',
     })
     const search = searcher.location.state
-    useEffect((search) => {
+    useEffect(() => {
         getProperties.getSome(takeProperties, search.sellOrRent, filter)
     }, [filter])
     const ChangeHandler = (e) => {

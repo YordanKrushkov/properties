@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UseState from './useState'
 ReactDOM.render(
-  <React.StrictMode>
+<React.StrictMode>
     <UseState>
       <App />
     </UseState>   

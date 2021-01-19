@@ -14,6 +14,10 @@
 }
 
 .aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 50px;
     background-color: white;
     width: 50%; 
@@ -21,6 +25,11 @@
 }
 
 .containerWrapper{
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.img{
+    margin:20px 0;
 }

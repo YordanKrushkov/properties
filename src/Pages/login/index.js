@@ -3,6 +3,7 @@ import styles from './index.module.css'
 import { Link, useHistory } from 'react-router-dom'
 import UserContext from '../../Context';
 import authenticate from '../../services/auth'
+import notify from '../../utils/notification'
 const url = 'http://localhost:4000/api/login'
 
 const Login = () => {
@@ -17,20 +18,23 @@ const Login = () => {
             ...user,
             [e.target.id]: e.target.value
         })
-
+        
     };
+  
     const submitHandler = async (e) => {
         e.preventDefault();
+        
         const { email, password } = user;
-
         await authenticate(url, {
             email, password
         }, (user) => {
             context.logIn(user);
             localStorage.setItem("user", email);
-            history.push('/');
-        }, (e) => {
-            console.log(e);
+            history.push('/', `Welcome, ${user.name} ${user.surname}`);
+        }, (err) => {
+            console.log('wrong password or email:',err);
+            document.getElementById('wrong').style.display='block'
+            notify('wrong')
             history.push('/login')
         })
     };
@@ -50,6 +54,7 @@ const Login = () => {
                 <div className={ styles.joinUs }> <p className={ styles.p }>You don't have an accout yet? </p>
                     <Link to="/register" className={ styles.a }>Join us now</Link>
                 </div>
+                <p className={styles.wrong} id="wrong">Wrong email or password! Please, try again!</p>
             </div>
         </div>
     )
