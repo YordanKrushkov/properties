@@ -14,12 +14,16 @@ class UseState extends Component {
             loggedIn: true,
         })
     }
+
     logOut = () => {
         document.cookie = 'x-auth-token=';
         localStorage.removeItem('user')
         this.setState({
             loggedIn: false,
+            id:null,
             email: null,
+            name:null,
+            surname:null,
         })
     }
     componentDidMount() {
@@ -37,10 +41,9 @@ class UseState extends Component {
     };
 
     render() {
-        console.log('auth?', this.state);
         const {
             loggedIn,
-            email
+            email,
         } = this.state
         if (loggedIn === null) {
             <div>Loading...</div>
