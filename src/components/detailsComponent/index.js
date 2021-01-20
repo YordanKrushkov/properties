@@ -27,7 +27,6 @@ const DetailsContainer = (properties) => {
                         <li className={ styles.detLi }>{ properties.furnished }</li>
                         <li className={ styles.detLi }>Construction: { properties.construction }</li>
                         <li className={ styles.detLi }>Floor: { properties.floormax }</li>
-                        <li className={ styles.detLi }>Year: { properties.year }</li>
                     </ul>
                 </div>
                 

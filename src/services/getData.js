@@ -30,7 +30,7 @@ const getPropertiesService= {
         getProperties(properties)
     },
 
-    async Searchtem(getProperties,filter){
+    async SearchItem(getProperties,filter){
         const promise = await fetch(`${url}/properties?sellOrRent=${filter.sellOrRent}&city=${filter.city}&type=${filter.type}&bedrooms=${filter.bedrooms}&minPrice=${filter.minPrice}&maxPrice=${filter.maxPrice}`,
         {
             method:'GET',

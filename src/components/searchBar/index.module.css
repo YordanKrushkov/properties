@@ -104,6 +104,9 @@ font-size: 38px;
     border:none;
     margin:40px;
 }
+.card button:hover{
+    cursor: pointer;
+}
 
 .typeContainer{
     display: flex;

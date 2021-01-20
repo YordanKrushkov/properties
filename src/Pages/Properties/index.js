@@ -6,18 +6,27 @@ import Filter from '../../components/filterBar/filter'
 
 
 const Properties = (searcher) => {
+    const search = searcher.location.state
     const [properties, takeProperties] = useState([])
     const [filter, getFilter] = useState({
-        city: '',
-        type: '',
-        bedrooms: '',
-        minPrice: '',
-        maxPrice: '',
+        city: search.city || '',
+        type: search.type || '',
+        bedrooms: search.bedrooms || '',
+        minPrice: search.minPrice || '',
+        maxPrice: search.maxPrice || '',
         sortBy: '',
     })
-    const search = searcher.location.state
+    let isMouted = false;
+    console.log(search);
+    console.log('filter:', filter);
     useEffect(() => {
-        getProperties.getSome(takeProperties, search.sellOrRent, filter)
+        getProperties.SearchItem(takeProperties, search)
+        isMouted = true
+    }, [])
+    useEffect(() => {
+        if (isMouted === false) {
+            getProperties.getSome(takeProperties, search.sellOrRent, filter)
+        }
     }, [filter])
     const ChangeHandler = (e) => {
         getFilter({

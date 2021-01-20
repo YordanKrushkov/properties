@@ -6,181 +6,128 @@ const AllCities = (classNeme, f, required) => {
     return (
         <select name="town" id="city" className={ classNeme } onChange={ f } required>
             <option id="city" value="0" selected>Show All</option>
-            <option id="city" value="София">София</option>
-            <option id="city" value="Пловдив">Пловдив</option>
-            <option id="city" value="Варна">Варна</option>
-            <option id="city" value="Бургас">Бургас</option>
-            <option id="city" value="Стара Загора">Стара Загора</option>
-            <option id="city" value="Русе">Русе</option>
-            <option id="city" value="Плевен">Плевен</option>
-            <option id="city" value="Айтос">Айтос</option>
-            <option id="city" value="Аксаково">Аксаково</option>
-            <option id="city" value="Антоново">Антоново</option>
-            <option id="city" value="Априлци">Априлци</option>
-            <option id="city" value="Асеновград">Асеновград</option>
-            <option id="city" value="Ахтопол">Ахтопол</option>
-            <option id="city" value="Балчик">Балчик</option>
-            <option id="city" value="Банкя">Банкя</option>
-            <option id="city" value="Банско">Банско</option>
-            <option id="city" value="Баня">Баня</option>
-            <option id="city" value="Батак">Батак</option>
-            <option id="city" value="Белене">Белене</option>
-            <option id="city" value="Белово">Белово</option>
-            <option id="city" value="Белоградчик">Белоградчик</option>
-            <option id="city" value="Белослав">Белослав</option>
-            <option id="city" value="Берковица">Берковица</option>
-            <option id="city" value="Благоевград">Благоевград</option>
-            <option id="city" value="Бобов Дол">Бобов Дол</option>
-            <option id="city" value="Боровец">Боровец</option>
-            <option id="city" value="Ботевград">Ботевград</option>
-            <option id="city" value="Брезник">Брезник</option>
-            <option id="city" value="Бургас">Бургас</option>
-            <option id="city" value="Бяла">Бяла</option>
-            <option id="city" value="Бяла Слатина">Бяла Слатина</option>
-            <option id="city" value="Варна">Варна</option>
-            <option id="city" value="Васил Левски">Васил Левски </option>
-            <option id="city" value="Велико Търново">Велико Търново</option>
-            <option id="city" value="Велинград">Велинград</option>
-            <option id="city" value="Видин">Видин</option>
-            <option id="city" value="Враца">Враца</option>
-            <option id="city" value="Вълчедръм">Вълчедръм</option>
-            <option id="city" value="Вършец">Вършец</option>
-            <option id="city" value="Габрово">Габрово</option>
-            <option id="city" value="Генерал Тошево">Генерал Тошево</option>
-            <option id="city" value="Горна Оряховица">Горна Оряховица</option>
-            <option id="city" value="Гоце Делчев">Гоце Делчев</option>
-            <option id="city" value="Гълъбово">Гълъбово</option>
-            <option id="city" value="Две Могили">Две Могили</option>
-            <option id="city" value="Девин">Девин</option>
-            <option id="city" value="Девня">Девня</option>
-            <option id="city" value="Джебел">Джебел</option>
-            <option id="city" value="Димитровград">Димитровград</option>
-            <option id="city" value="Добрич">Добрич</option>
-            <option id="city" value="Долни Дъбник">Долни Дъбник</option>
-            <option id="city" value="Дряново">Дряново</option>
-            <option id="city" value="Дулово">Дулово</option>
-            <option id="city" value="Дупница">Дупница</option>
-            <option id="city" value="Елена">Елена</option>
-            <option id="city" value="Елин Пелин">Елин Пелин</option>
-            <option id="city" value="Елхово">Елхово</option>
-            <option id="city" value="Етрополе">Етрополе</option>
-            <option id="city" value="Златоград">Златоград</option>
-            <option id="city" value="Исперих">Исперих</option>
-            <option id="city" value="Ихтиман">Ихтиман</option>
-            <option id="city" value="Каварна">Каварна</option>
-            <option id="city" value="Казанлък">Казанлък</option>
-            <option id="city" value="Калофер">Калофер </option>
-            <option id="city" value="Карлово">Карлово</option>
-            <option id="city" value="Карнобат">Карнобат</option>
-            <option id="city" value="Климен">Климен </option>
-            <option id="city" value="Клисура">Клисура </option>
-            <option id="city" value="Кнежа">Кнежа</option>
-            <option id="city" value="Козлодуй">Козлодуй</option>
-            <option id="city" value="Копривщица">Копривщица </option>
-            <option id="city" value="Костандово">Костандово</option>
-            <option id="city" value="Костенец">Костенец</option>
-            <option id="city" value="Костинброд">Костинброд</option>
-            <option id="city" value="Котел">Котел</option>
-            <option id="city" value="Кресна">Кресна</option>
-            <option id="city" value="Крумовград">Крумовград</option>
-            <option id="city" value="Кубрат">Кубрат</option>
-            <option id="city" value="Кула">Кула</option>
-            <option id="city" value="Кърджали">Кърджали</option>
-            <option id="city" value="Кюстендил">Кюстендил</option>
-            <option id="city" value="Левски">Левски</option>
-            <option id="city" value="Ловеч">Ловеч</option>
-            <option id="city" value="Лозница">Лозница</option>
-            <option id="city" value="Лом">Лом</option>
-            <option id="city" value="Луковит">Луковит</option>
-            <option id="city" value="Любимец">Любимец</option>
-            <option id="city" value="Лясковец">Лясковец</option>
-            <option id="city" value="Мадан">Мадан</option>
-            <option id="city" value="Мало Конаре">Мало Конаре</option>
-            <option id="city" value="Мездра">Мездра</option>
-            <option id="city" value="Момчилград">Момчилград</option>
-            <option id="city" value="Монтана">Монтана</option>
-            <option id="city" value="Несебър">Несебър</option>
-            <option id="city" value="Никопол">Никопол</option>
-            <option id="city" value="Нова Загора">Нова Загора</option>
-            <option id="city" value="Нови Пазар">Нови Пазар</option>
-            <option id="city" value="Оборочище">Оборочище</option>
-            <option id="city" value="Омуртаг">Омуртаг</option>
-            <option id="city" value="Оряхово">Оряхово</option>
-            <option id="city" value="Павликени">Павликени</option>
-            <option id="city" value="Пазарджик">Пазарджик</option>
-            <option id="city" value="Пампорово">Пампорово</option>
-            <option id="city" value="Панагюрище">Панагюрище</option>
-            <option id="city" value="Панчарево">Панчарево</option>
-            <option id="city" value="Перник">Перник</option>
-            <option id="city" value="Петрич">Петрич</option>
-            <option id="city" value="Пещера">Пещера</option>
-            <option id="city" value="Плевен">Плевен</option>
-            <option id="city" value="Пловдив">Пловдив</option>
-            <option id="city" value="Полски Тръмбеш">Полски Тръмбеш</option>
-            <option id="city" value="Поморие">Поморие</option>
-            <option id="city" value="Попово">Попово</option>
-            <option id="city" value="Правец">Правец</option>
-            <option id="city" value="Преслав">Преслав</option>
-            <option id="city" value="Приморско">Приморско</option>
-            <option id="city" value="Провадия">Провадия</option>
-            <option id="city" value="Първомай">Първомай</option>
-            <option id="city" value="Раднево">Раднево</option>
-            <option id="city" value="Радомир">Радомир</option>
-            <option id="city" value="Разград">Разград</option>
-            <option id="city" value="Разлог">Разлог</option>
-            <option id="city" value="Ракитово">Ракитово</option>
-            <option id="city" value="Раковски">Раковски</option>
-            <option id="city" value="Розино">Розино</option>
-            <option id="city" value="Рудозем">Рудозем</option>
-            <option id="city" value="Русе">Русе</option>
-            <option id="city" value="Самоков">Самоков</option>
-            <option id="city" value="Самуил">Самуил</option>
-            <option id="city" value="Сандански">Сандански</option>
-            <option id="city" value="Свиленград">Свиленград</option>
-            <option id="city" value="Свищов">Свищов</option>
-            <option id="city" value="Своге">Своге</option>
-            <option id="city" value="Севлиево">Севлиево</option>
-            <option id="city" value="Септември">Септември</option>
-            <option id="city" value="Силистра">Силистра</option>
-            <option id="city" value="Симеоновград">Симеоновград</option>
-            <option id="city" value="Симитли">Симитли</option>
-            <option id="city" value="Сливен">Сливен</option>
-            <option id="city" value="Сливница">Сливница</option>
-            <option id="city" value="Слънчев Бряг">Слънчев Бряг</option>
-            <option id="city" value="Смолян">Смолян</option>
-            <option id="city" value="Созопол">Созопол</option>
-            <option id="city" value="Сопот">Сопот</option>
-            <option id="city" value="София">София</option>
-            <option id="city" value="Средец">Средец</option>
-            <option id="city" value="Средногорие">Средногорие</option>
-            <option id="city" value="Стамболийски">Стамболийски</option>
-            <option id="city" value="Стара Загора">Стара Загора</option>
-            <option id="city" value="Стражица">Стражица</option>
-            <option id="city" value="Стралджа">Стралджа</option>
-            <option id="city" value="Сунгурларе">Сунгурларе</option>
-            <option id="city" value="Съединение">Съединение</option>
-            <option id="city" value="Твърдица">Твърдица</option>
-            <option id="city" value="Тервел">Тервел</option>
-            <option id="city" value="Тетевен">Тетевен</option>
-            <option id="city" value="Тополовград">Тополовград</option>
-            <option id="city" value="Троян">Троян</option>
-            <option id="city" value="Трявна">Трявна</option>
-            <option id="city" value="Тутракан">Тутракан</option>
-            <option id="city" value="Търговище">Търговище</option>
-            <option id="city" value="Харманли">Харманли</option>
-            <option id="city" value="Хасково">Хасково</option>
-            <option id="city" value="Хисаря">Хисаря</option>
-            <option id="city" value="Царево">Царево</option>
-            <option id="city" value="Цар Калоян">Цар Калоян</option>
-            <option id="city" value="Чепеларе">Чепеларе</option>
-            <option id="city" value="Червен Бряг">Червен Бряг</option>
-            <option id="city" value="Черноочене">Черноочене</option>
-            <option id="city" value="Чирпан">Чирпан</option>
-            <option id="city" value="Шабла">Шабла</option>
-            <option id="city" value="Шумен">Шумен</option>
-            <option id="city" value="Якоруда">Якоруда</option>
-            <option id="city" value="Ямбол">Ямбол</option>
-            <option id="city" value="Завет">Завет</option>
+            <option id="city" value="Avon">Avon</option>
+            <option id="city" value="Bedfordshire">Bedfordshire</option>
+            <option id="city" value="Berkshire">Berkshire</option>
+            <option id="city" value="Bristol">Bristol</option>
+            <option id="city" value="Buckinghamshire">Buckinghamshire</option>
+            <option id="city" value="Cambridgeshire">Cambridgeshire</option>
+            <option id="city" value="Cheshire">Cheshire</option>
+            <option id="city" value="Cleveland">Cleveland</option>
+            <option id="city" value="Cornwall">Cornwall</option>
+            <option id="city" value="Cumbria">Cumbria</option>
+            <option id="city" value="Derbyshire">Derbyshire</option>
+            <option id="city" value="Devon">Devon</option>
+            <option id="city" value="Dorset">Dorset</option>
+            <option id="city" value="Durham">Durham</option>
+            <option id="city" value="East Riding of Yorkshire">East Riding of Yorkshire</option>
+            <option id="city" value="East Sussex">East Sussex</option>
+            <option id="city" value="Essex">Essex</option>
+            <option id="city" value="Gloucestershire">Gloucestershire</option>
+            <option id="city" value="Greater Manchester">Greater Manchester</option>
+            <option id="city" value="Hampshire">Hampshire</option>
+            <option id="city" value="Herefordshire">Herefordshire</option>
+            <option id="city" value="Hertfordshire">Hertfordshire</option>
+            <option id="city" value="Humberside">Humberside</option>
+            <option id="city" value="Isle of Wight">Isle of Wight</option>
+            <option id="city" value="Isles of Scilly">Isles of Scilly</option>
+            <option id="city" value="Kent">Kent</option>
+            <option id="city" value="Lancashire">Lancashire</option>
+            <option id="city" value="Leicestershire">Leicestershire</option>
+            <option id="city" value="Lincolnshire">Lincolnshire</option>
+            <option id="city" value="London">London</option>
+            <option id="city" value="Merseyside">Merseyside</option>
+            <option id="city" value="Middlesex">Middlesex</option>
+            <option id="city" value="Norfolk">Norfolk</option>
+            <option id="city" value="North Yorkshire">North Yorkshire</option>
+            <option id="city" value="Northamptonshire">Northamptonshire</option>
+            <option id="city" value="Northumberland">Northumberland</option>
+            <option id="city" value="Nottinghamshire">Nottinghamshire</option>
+            <option id="city" value="Oxfordshire">Oxfordshire</option>
+            <option id="city" value="Rutland">Rutland</option>
+            <option id="city" value="Shropshire">Shropshire</option>
+            <option id="city" value="Somerset">Somerset</option>
+            <option id="city" value="South Yorkshire">South Yorkshire</option>
+            <option id="city" value="Staffordshire">Staffordshire</option>
+            <option id="city" value="Suffolk">Suffolk</option>
+            <option id="city" value="Surrey">Surrey</option>
+            <option id="city" value="Tyne and Wear">Tyne and Wear</option>
+            <option id="city" value="Warwickshire">Warwickshire</option>
+            <option id="city" value="West Midlands">West Midlands</option>
+            <option id="city" value="West Sussex">West Sussex</option>
+            <option id="city" value="West Yorkshire">West Yorkshire</option>
+            <option id="city" value="Wiltshire">Wiltshire</option>
+            <option id="city" value="Worcestershire">Worcestershire</option>
+            <option id="city" value="">&nbsp</option>
+            <option id="city" value="--UK Offshore--">--UK Offshore--</option>
+            <option id="city" value="Channel Islands">Channel Islands</option>
+            <option id="city" value="Isle of Man">Isle of Man</option>
+            <option id="city" value="">&nbsp</option>
+            <option id="city" value="--Northern Ireland--">--Northern Ireland--</option>
+            <option id="city" value="Antrim">Antrim</option>
+            <option id="city" value="Armagh">Armagh</option>
+            <option id="city" value="Down">Down</option>
+            <option id="city" value="Fermanagh">Fermanagh</option>
+            <option id="city" value="Londonderry">Londonderry</option>
+            <option id="city" value="Tyrone">Tyrone</option>
+            <option id="city" value="">&nbsp</option>
+            <option id="city" value="--Scotland--">--Scotland--</option>
+            <option id="city" value="Aberdeen City">Aberdeen City</option>
+            <option id="city" value="Aberdeenshire">Aberdeenshire</option>
+            <option id="city" value="Angus">Angus</option>
+            <option id="city" value="Argyll and Bute">Argyll and Bute</option>
+            <option id="city" value="Borders">Borders</option>
+            <option id="city" value="Clackmannan">Clackmannan</option>
+            <option id="city" value="Dumfries and Galloway">Dumfries and Galloway</option>
+            <option id="city" value="Dundee (City of)">Dundee (City of)</option>
+            <option id="city" value="East Ayrshire">East Ayrshire</option>
+            <option id="city" value="East Dunbartonshire">East Dunbartonshire</option>
+            <option id="city" value="East Lothian">East Lothian</option>
+            <option id="city" value="East Renfrewshire">East Renfrewshire</option>
+            <option id="city" value="Edinburgh (City of)">Edinburgh (City of)</option>
+            <option id="city" value="Falkirk">Falkirk</option>
+            <option id="city" value="Fife">Fife</option>
+            <option id="city" value="Glasgow (City of)">Glasgow (City of)</option>
+            <option id="city" value="Highland">Highland</option>
+            <option id="city" value="Inverclyde">Inverclyde</option>
+            <option id="city" value="Midlothian">Midlothian</option>
+            <option id="city" value="Moray">Moray</option>
+            <option id="city" value="North Ayrshire">North Ayrshire</option>
+            <option id="city" value="North Lanarkshire">North Lanarkshire</option>
+            <option id="city" value="Orkney">Orkney</option>
+            <option id="city" value="Perthshire and Kinross">Perthshire and Kinross</option>
+            <option id="city" value="Renfrewshire">Renfrewshire</option>
+            <option id="city" value="Shetland">Shetland</option>
+            <option id="city" value="South Ayrshire">South Ayrshire</option>
+            <option id="city" value="South Lanarkshire">South Lanarkshire</option>
+            <option id="city" value="Stirling">Stirling</option>
+            <option id="city" value="West Dunbartonshire">West Dunbartonshire</option>
+            <option id="city" value="West Lothian">West Lothian</option>
+            <option id="city" value="Western Isles">Western Isles</option>
+            <option id="city" value="">&nbsp</option>
+            <option id="city" value="--Wales--">--Wales--</option>
+            <option id="city" value="Blaenau Gwent">Blaenau Gwent</option>
+            <option id="city" value="Bridgend">Bridgend</option>
+            <option id="city" value="Caerphilly">Caerphilly</option>
+            <option id="city" value="Cardiff">Cardiff</option>
+            <option id="city" value="Carmarthenshire">Carmarthenshire</option>
+            <option id="city" value="Ceredigion">Ceredigion</option>
+            <option id="city" value="Conwy">Conwy</option>
+            <option id="city" value="Denbighshire">Denbighshire</option>
+            <option id="city" value="Flintshire">Flintshire</option>
+            <option id="city" value="Gwynedd">Gwynedd</option>
+            <option id="city" value="Isle of Anglesey">Isle of Anglesey</option>
+            <option id="city" value="Merthyr Tydfil">Merthyr Tydfil</option>
+            <option id="city" value="Monmouthshire">Monmouthshire</option>
+            <option id="city" value="Neath Port Talbot">Neath Port Talbot</option>
+            <option id="city" value="Newport">Newport</option>
+            <option id="city" value="Pembrokeshire">Pembrokeshire</option>
+            <option id="city" value="Powys">Powys</option>
+            <option id="city" value="Rhondda Cynon Taff">Rhondda Cynon Taff</option>
+            <option id="city" value="Swansea">Swansea</option>
+            <option id="city" value="Torfaen">Torfaen</option>
+            <option id="city" value="The Vale of Glamorgan">The Vale of Glamorgan</option>
+            <option id="city" value="Wrexham">Wrexham</option>
         </select>
     )
 }

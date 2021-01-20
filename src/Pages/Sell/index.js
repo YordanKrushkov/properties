@@ -24,6 +24,9 @@ const Sell = () => {
     }
     useEffect(() => {
         getProperties.getSome(takeProperties, 'SALE', filter)
+    }, [])
+    useEffect(() => {
+        getProperties.getSome(takeProperties, 'SALE', filter)
     }, [filter])
 
     return (

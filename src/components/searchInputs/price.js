@@ -8,7 +8,7 @@ const priceList= {
 
         return (
             <select name="price" id={ minOrMax }  className={ classNeme } onChange={f}>
-                <option value="0" selected>Alll</option>
+                <option value="0" selected>Show All...</option>
                 <option value="10000">10 000</option>
                 <option value="20000">20 000</option>
                 <option value="30000">30 000</option>
@@ -48,7 +48,7 @@ const priceList= {
 
         return (
             <select name="price" id={ minOrMax } className={ classNeme } onChange={f}>
-                <option value="0" selected>Alll</option>
+                <option value="0" selected>Show All...</option>
                 <option value="100">100</option>
                 <option value="200">200</option>
                 <option value="300">300</option>

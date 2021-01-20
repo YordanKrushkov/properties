@@ -9,11 +9,6 @@ const Filter = (ChangeHandler, option) => {
 
     return (
         <div id='filterBar' className={ styles.nav } >
-  
-        <span className={ styles.navSpan }>Sort by:</span>
-        <div className={ styles.newOne }>
-        {SortInput(ChangeHandler)}
-        </div>
             <span className={ styles.navSpan }>Filter:</span>
             <div className={ styles.searchButton }>
                 <label htmlFor="city" ><span className={ styles.navSpan }>City: </span> </label>
@@ -29,20 +24,24 @@ const Filter = (ChangeHandler, option) => {
             </div>
             <div className={ styles.searchButton }>
                 { option === "RENT" ? (<div className={ styles.imputs } >
-                    <label htmlFor="minPrice"><span className={ styles.navSpan }>Min.Price</span></label>
+                    <label htmlFor="minPrice"><span className={ styles.navSpan }>Min.Price: </span></label>
                     {Price.RentingPrice("minPrice", styles.input, ChangeHandler) } </div>) :
                     (<div className={ styles.imputs } >
-                        <label htmlFor="minPrice"><span className={ styles.navSpan }>Min.Price </span></label>
+                        <label htmlFor="minPrice"><span className={ styles.navSpan }>Min.Price: </span></label>
                         {Price.SellingPrice("minPrice", styles.input, ChangeHandler) } </div>) }
             </div>
             <div className={ styles.searchButton }>
                 { option === "RENT" ? (<div className={ styles.imputs } >
-                    <label htmlFor="price"><span className={ styles.navSpan }>Max.Price: </span></label>
+                    <label htmlFor="price"><span className={ styles.navSpan }>Max.Price:  </span></label>
                     {Price.RentingPrice("maxPrice", styles.input, ChangeHandler) } </div>) :
                     (<div className={ styles.imputs } >
-                        <label htmlFor="price"><span className={ styles.navSpan }>Max. Price </span></label>
+                        <label htmlFor="price"><span className={ styles.navSpan }>Max. Price: </span></label>
                         {Price.SellingPrice("maxPrice", styles.input, ChangeHandler) } </div>) }
             </div>
+            <div className={ styles.newOne }>
+        <span className={ styles.navSpan }>Sort by:</span>
+        {SortInput(ChangeHandler)}
+        </div>
         </div>
     )
 }
