@@ -20,7 +20,7 @@ const optionFields= {
         return (
             <select name="type" id="bedrooms" className={ className } onChange={ f } required>
                 <option value="0">Select...</option>
-                { SearchOpions('bedrooms', 'studio', 'Studio', null) }
+                { SearchOpions('bedrooms', 'Studio', 'Studio', null) }
                 { SearchOpions('bedrooms', '1 bedroom', null) }
                 { SearchOpions('bedrooms', '2 bedroom', null) }
                 { SearchOpions('bedrooms', '3 bedroom', null) }

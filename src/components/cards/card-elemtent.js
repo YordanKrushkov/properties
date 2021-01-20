@@ -10,8 +10,10 @@ const CardElement = (propertie, key) => {
    
     let char = '';
     let bath=''
-    if (propertie.bedrooms) {
+    if (propertie.bedrooms && propertie.bedrooms!=='Studio') {
         char = propertie.bedrooms.charAt(0)
+    }else{
+        char='1'
     }
     if (propertie.bathroom) {
         bath = propertie.bathroom.charAt(0)
@@ -35,7 +37,7 @@ const CardElement = (propertie, key) => {
                         </div>
                     </header>
                     <aside className={ styles.aside }>
-                        <h1 className={ styles.price }>{ `$ ${propertie.price} ${propertie.sellOrRent==='RENT' ?'p.m' : '' }`}</h1>
+                        <h1 className={ styles.price }>{ `£ ${propertie.price} ${propertie.sellOrRent==='RENT' ?'p.m' : '' }`}</h1>
                         <div className={styles.imageWrapper}>
                         <div className={ styles.headerPic } >
                             <img  className={ styles.imgAsside }src={ pic } alt="bedroom" />

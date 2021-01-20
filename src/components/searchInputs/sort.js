@@ -6,9 +6,9 @@ const SortInput = (f) => {
 
     return (
     <select name="sortBy" id="sortBy" className={styles.sortSelector} onChange={ f }>
-    <option className={styles.neButton} id="sortBy" value='lowerPrice' >Lower price</option>
-     <option className={styles.neButton} id="sortBy" value='higherPrice' >Higher price</option>
-     <option className={styles.neButton} id="sortBy" value="newest" > Date of post</option>
+     <option className={styles.neButton} id="sortBy" value="newest" > Newest</option>
+    <option className={styles.neButton} id="sortBy" value='lowerPrice' >Price: Low-High</option>
+     <option className={styles.neButton} id="sortBy" value='higherPrice' >Price: High-Low</option>
     </select>
     )
 }

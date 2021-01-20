@@ -60,3 +60,8 @@ a{
     align-items: center;
     justify-content: center;
 }
+
+.logo{
+    height: 70px;
+    margin:5px 0 0 50px;
+}
