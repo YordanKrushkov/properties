@@ -27,7 +27,7 @@ const Body = (props) => {
             <Search />
             <div className={ styles.cardContainer }>
                 <Card />
-            </div> 
+            </div>
         </div>
     )
 }

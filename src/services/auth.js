@@ -1,6 +1,3 @@
-
-
-
 const authenticate = async (url, body, onSuccess, onFailure) => {
     try {
         const promise = await fetch(url, {

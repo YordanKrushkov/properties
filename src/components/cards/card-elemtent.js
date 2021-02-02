@@ -5,7 +5,6 @@ import bathpic from '../../images/bath.svg'
 import styles from './index.module.css'
 
 const CardElement = (propertie, key) => {
-
     const history=useHistory()
    
     let char = '';

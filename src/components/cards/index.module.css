@@ -16,11 +16,7 @@
     height: fit-content;
 }
 .img {
-    max-height: 300px;
-    min-height: 250px;
-    height: 100%;
-    max-width: 450px;
-    min-width: 250px;
+    width: 90%;
     border-top-left-radius: 10px;
 
 }
